@@ -11,6 +11,11 @@ import { securityThreats, securityAgencies } from '../../data/securityData';
 import { currentAffairsData } from '../../data/currentAffairsData';
 import { pyqDatabase } from '../../data/pyqData';
 import { prelimsQuestionsBank } from '../../data/prelimsQuestionsData';
+import { planningAndGrowthData } from '../../data/economyPlanningData';
+import { agricultureComprehensiveData } from '../../data/agriComprehensiveData';
+import { scienceComprehensiveData } from '../../data/scienceComprehensiveData';
+import { environmentComprehensiveData } from '../../data/environmentComprehensiveData';
+import { securityComprehensiveData } from '../../data/securityComprehensiveData';
 
 interface SearchResult {
   id: string;
@@ -231,6 +236,72 @@ export const SearchModal: React.FC = () => {
           snippet: item.questionText.slice(0, 140) + '...',
           targetTab: 'prelims',
           icon: CheckSquare
+        });
+      }
+    });
+
+    // Search Comprehensive Syllabus Modules (Economy, Agri, Science, Environment, Security)
+    planningAndGrowthData.forEach(item => {
+      if (item.title.toLowerCase().includes(q) || item.subTitle.toLowerCase().includes(q) || item.coreConcepts.some(c => c.title.toLowerCase().includes(q) || c.points.some(p => p.toLowerCase().includes(q)))) {
+        res.push({
+          id: item.id,
+          title: `${item.title} (${item.category})`,
+          category: 'Economy Syllabus Master',
+          snippet: item.description.slice(0, 140) + '...',
+          targetTab: 'economy',
+          icon: TrendingUp
+        });
+      }
+    });
+
+    agricultureComprehensiveData.forEach(item => {
+      if (item.title.toLowerCase().includes(q) || item.subTitle.toLowerCase().includes(q) || item.coreConcepts.some(c => c.title.toLowerCase().includes(q) || c.points.some(p => p.toLowerCase().includes(q)))) {
+        res.push({
+          id: item.id,
+          title: `${item.title} (${item.category})`,
+          category: 'Agriculture Syllabus Master',
+          snippet: item.description.slice(0, 140) + '...',
+          targetTab: 'agriculture',
+          icon: Sprout
+        });
+      }
+    });
+
+    scienceComprehensiveData.forEach(item => {
+      if (item.title.toLowerCase().includes(q) || item.subTitle.toLowerCase().includes(q) || item.coreConcepts.some(c => c.title.toLowerCase().includes(q) || c.points.some(p => p.toLowerCase().includes(q)))) {
+        res.push({
+          id: item.id,
+          title: `${item.title} (${item.category})`,
+          category: 'Science & Tech Syllabus Master',
+          snippet: item.description.slice(0, 140) + '...',
+          targetTab: 'science',
+          icon: Cpu
+        });
+      }
+    });
+
+    environmentComprehensiveData.forEach(item => {
+      if (item.title.toLowerCase().includes(q) || item.subTitle.toLowerCase().includes(q) || item.coreConcepts.some(c => c.title.toLowerCase().includes(q) || c.points.some(p => p.toLowerCase().includes(q)))) {
+        res.push({
+          id: item.id,
+          title: `${item.title} (${item.category})`,
+          category: 'Environment Syllabus Master',
+          snippet: item.description.slice(0, 140) + '...',
+          targetTab: 'environment',
+          icon: Leaf
+        });
+      }
+    });
+
+    securityComprehensiveData.forEach(item => {
+      if (item.title.toLowerCase().includes(q) || item.subTitle.toLowerCase().includes(q) || item.coreConcepts.some(c => c.title.toLowerCase().includes(q) || c.points.some(p => p.toLowerCase().includes(q)))) {
+        res.push({
+          id: item.id,
+          title: `${item.title} (${item.category})`,
+          category: 'Security Syllabus Master',
+          snippet: item.description.slice(0, 140) + '...',
+          targetTab: 'security',
+          icon: ShieldAlert
         });
       }
     });

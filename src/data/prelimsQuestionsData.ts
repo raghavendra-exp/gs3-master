@@ -322,5 +322,141 @@ export const prelimsQuestionsBank: PrelimsQuestion[] = [
     concept: 'PMLA requires an antecedent crime (predicate offense) listed in its Schedule (e.g. corruption under PC Act, narcotics under NDPS, murder under IPC/BNS).',
     memoryTrap: 'Students often assume FIU-IND belongs to MHA because it deals with financial intelligence. It is firmly under the Department of Revenue, Ministry of Finance!',
     tags: ['PMLA', 'Enforcement Directorate', 'FIU-IND', 'Money Laundering', 'Supreme Court']
+  },
+  {
+    id: 'mcq-econ-003',
+    topic: 'Economy',
+    subtopic: 'FRBM Act & Budgetary Reforms',
+    difficulty: 'Medium',
+    type: 'Statement_Two',
+    questionText: 'With reference to Government Budgeting and Fiscal Consolidation in India, consider the following statements:',
+    statements: [
+      'The merger of the 92-year-old Railway Budget into the Union Budget in 2017 was based on the recommendations of the Bibek Debroy Committee.',
+      'Under the amended FRBM Act, an "Escape Clause" allows a relaxation of up to 0.5% of GDP in the fiscal deficit target during periods of national security, war, or severe agricultural collapse.'
+    ],
+    options: [
+      { id: 'A', text: '1 only' },
+      { id: 'B', text: '2 only' },
+      { id: 'C', text: 'Both 1 and 2' },
+      { id: 'D', text: 'Neither 1 nor 2' }
+    ],
+    correctOptionId: 'C',
+    explanation: 'Both statements 1 and 2 are correct. Statement 1 is correct: The separate Railway Budget (introduced in 1924 following the Acworth Committee) was abolished and merged into the Union Budget in 2017 based on the Bibek Debroy Committee recommendations. Statement 2 is correct: Based on the N.K. Singh Committee recommendations, the amended FRBM Act incorporates an Escape Clause permitting a 0.5% deviation in fiscal deficit targets during structural economic reforms, national security crises, acts of war, or severe agricultural downturns.',
+    whyWrongOptions: [
+      'Option A ignores the verified 0.5% escape clause under the amended FRBM framework.',
+      'Option B misses the Bibek Debroy committee’s landmark role in the railway budget merger.'
+    ],
+    concept: 'Budget 2017 reforms: Railway budget merger, advancement to Feb 1, and scrapping of Plan vs Non-Plan expenditure.',
+    memoryTrap: 'Do not confuse the Acworth Committee (separated rail budget in 1924) with the Bibek Debroy Committee (re-merged it in 2017).',
+    tags: ['FRBM Act', 'Union Budget', 'Bibek Debroy Committee', 'Fiscal Consolidation']
+  },
+  {
+    id: 'mcq-agri-003',
+    topic: 'Agriculture',
+    subtopic: 'WTO Boxes & Agricultural Subsidies',
+    difficulty: 'Hard',
+    type: 'Pair_Matching',
+    questionText: 'Consider the following pairs of agricultural subsidies and their respective classifications under the WTO Agreement on Agriculture (AoA):',
+    pairs: [
+      { left: '1. Government expenditure on agricultural research and pest control', right: 'Green Box' },
+      { left: '2. Minimum Support Price (MSP) price-support payments', right: 'Amber Box' },
+      { left: '3. Direct payments to farmers linked to production-limiting programmes', right: 'Blue Box' }
+    ],
+    options: [
+      { id: 'A', text: 'Only one pair is correctly matched' },
+      { id: 'B', text: 'Only two pairs are correctly matched' },
+      { id: 'C', text: 'All three pairs are correctly matched' },
+      { id: 'D', text: 'None of the pairs is correctly matched' }
+    ],
+    correctOptionId: 'C',
+    explanation: 'All three pairs are correctly matched. Green Box covers non-trade distorting measures (research, pest management, crop insurance, rural infrastructure) and is permitted without financial limits. Amber Box includes trade-distorting price support like India’s MSP and input subsidies, which are subject to a 10% de minimis limit for developing nations. Blue Box covers direct payments linked to production-limiting programs (common in EU/US), exempt from reduction commitments.',
+    whyWrongOptions: [
+      'Option A, B, and D fail to recognize that all three box definitions align exactly with WTO AoA Annex 2 and Article 6 guidelines.'
+    ],
+    concept: 'WTO Agreement on Agriculture categorizes domestic farm support into Green (permitted), Blue (production-limiting), and Amber (trade-distorting capped) boxes.',
+    memoryTrap: 'Remember: Green = Go (unlimited); Amber = Caution/Stop (capped at 10% for developing nations); Blue = Blueprinted production caps.',
+    tags: ['WTO', 'Agreement on Agriculture', 'MSP', 'Subsidies', 'Green Box']
+  },
+  {
+    id: 'mcq-sci-003',
+    topic: 'Science',
+    subtopic: 'Achievements of Indian Scientists & Everyday Science',
+    difficulty: 'Medium',
+    type: 'Statement_Two',
+    questionText: 'Consider the following statements regarding scientific achievements and pharmaceutical chemistry in India:',
+    statements: [
+      'The oral contraceptive pill "Saheli" (Centchroman) is the world’s first non-steroidal, once-a-week contraceptive developed indigenously by CDRI Lucknow.',
+      'Satyendra Nath Bose derived Planck’s black-body radiation law without using classical electrodynamics, providing the basis for Bose-Einstein statistics.'
+    ],
+    options: [
+      { id: 'A', text: '1 only' },
+      { id: 'B', text: '2 only' },
+      { id: 'C', text: 'Both 1 and 2' },
+      { id: 'D', text: 'Neither 1 nor 2' }
+    ],
+    correctOptionId: 'C',
+    explanation: 'Both statements 1 and 2 are correct. Statement 1 is correct: "Saheli" (Ormeloxifene/Centchroman) was developed by the Central Drug Research Institute (CDRI) in Lucknow; unlike typical steroidal oral pills that release synthetic estrogen/progesterone, it is a non-steroidal selective estrogen receptor modulator (SERM) taken once a week with negligible hormonal side effects. Statement 2 is correct: In 1924, Satyendra Nath Bose sent a short paper to Albert Einstein formulating quantum statistics for photons without relying on classical electrodynamics, which Einstein translated into German and extended to atoms, predicting the Bose-Einstein Condensate.',
+    whyWrongOptions: [
+      'Option A misses S.N. Bose’s theoretical physics derivation that earned him global immortality in quantum mechanics.',
+      'Option B misses CDRI’s globally acclaimed achievement in reproductive healthcare chemistry.'
+    ],
+    concept: 'S.N. Bose pioneered quantum statistics for integer-spin particles (bosons); CDRI Lucknow developed Centchroman (Saheli).',
+    memoryTrap: 'Do not confuse S.N. Bose (quantum statistics/bosons) with J.C. Bose (radio millimeter waves and plant crescograph).',
+    tags: ['Indian Scientists', 'S.N. Bose', 'CDRI Lucknow', 'Everyday Chemistry']
+  },
+  {
+    id: 'mcq-env-003',
+    topic: 'Environment',
+    subtopic: 'Wildlife Protection Amendment Act 2022 & EIA 2006',
+    difficulty: 'Hard',
+    type: 'Statement_Two',
+    questionText: 'With reference to environmental legislation and clearance procedures in India, consider the following statements:',
+    statements: [
+      'The Wildlife (Protection) Amendment Act, 2022 rationalized the original six schedules down to four, with Schedule IV specifically dedicated to specimens listed in the CITES Appendices.',
+      'Under the EIA Notification 2006, developmental projects categorized as "Category B2" are mandated to conduct a comprehensive public hearing before the State Pollution Control Board.'
+    ],
+    options: [
+      { id: 'A', text: '1 only' },
+      { id: 'B', text: '2 only' },
+      { id: 'C', text: 'Both 1 and 2' },
+      { id: 'D', text: 'Neither 1 nor 2' }
+    ],
+    correctOptionId: 'A',
+    explanation: 'Statement 1 is correct. Statement 2 is incorrect. Under the Wildlife Protection (Amendment) Act 2022, schedules were reduced from 6 to 4: Schedule I (highest protection), Schedule II (lesser protection), Schedule III (protected plant species), and Schedule IV (specimens listed under the Appendices of CITES). Statement 2 is false: Under EIA 2006, Category B projects are appraised at the State level by SEIAA/SEAC and subdivided into B1 and B2; Category B1 projects require a full EIA report and public hearing, whereas Category B2 projects are explicitly EXEMPT from conducting an EIA study and public consultation.',
+    whyWrongOptions: [
+      'Option B and C incorrectly assert that Category B2 requires public consultation, which contradicts the core design of EIA 2006.',
+      'Option D is incorrect as Statement 1 accurately captures the 2022 WPA schedule restructuring.'
+    ],
+    concept: 'WPA 2022 creates 4 schedules (Schedule IV = CITES); EIA 2006 Category B2 projects do NOT require EIA reports or public hearings.',
+    memoryTrap: 'Students often assume that all developmental projects must undergo public consultation. Remember: Category B2 is an explicit statutory exemption!',
+    tags: ['WPA 2022', 'CITES', 'EIA 2006', 'Environmental Clearance']
+  },
+  {
+    id: 'mcq-sec-002',
+    topic: 'Security',
+    subtopic: 'Assam Rifles & Indo-Myanmar Border Management',
+    difficulty: 'Medium',
+    type: 'Statement_Two',
+    questionText: 'With reference to border security and paramilitary forces in India, consider the following statements:',
+    statements: [
+      'Assam Rifles is under a dual control structure wherein administrative control rests with the Ministry of Home Affairs, while operational command rests with the Ministry of Defence.',
+      'In 2024, the Government of India announced the complete suspension of the Free Movement Regime (FMR) along the Indo-Myanmar border to curb trans-border insurgent movement and illicit narco-trafficking.'
+    ],
+    options: [
+      { id: 'A', text: '1 only' },
+      { id: 'B', text: '2 only' },
+      { id: 'C', text: 'Both 1 and 2' },
+      { id: 'D', text: 'Neither 1 nor 2' }
+    ],
+    correctOptionId: 'C',
+    explanation: 'Both statements 1 and 2 are correct. Statement 1 is correct: Raised in 1835 as the Cachar Levy, the Assam Rifles operates under dual control—its budgetary allocations and administrative management are overseen by the Ministry of Home Affairs (MHA), while its operational command and officers are drawn from the Indian Army under the Ministry of Defence (MoD). Statement 2 is correct: In early 2024, the Ministry of Home Affairs officially suspended the Free Movement Regime (which previously permitted border tribes to travel up to 16 km on either side without a visa) and announced smart fencing of the entire 1,643 km Indo-Myanmar border to tackle illegal immigration, insurgent transit, and Golden Triangle narcotics smuggling.',
+    whyWrongOptions: [
+      'Option A ignores the landmark 2024 decision to end the FMR along the Myanmar border.',
+      'Option B misses the unique dual administrative-operational control that governs the Assam Rifles.'
+    ],
+    concept: 'Assam Rifles dual control: MHA (Admin) + MoD (Operational); Indo-Myanmar 1,643 km border FMR suspended in 2024.',
+    memoryTrap: 'Do not confuse ITBP (under sole MHA control) with Assam Rifles (dual control MHA + MoD).',
+    tags: ['Assam Rifles', 'Border Management', 'Free Movement Regime', 'Indo-Myanmar', 'MHA']
   }
 ];
+

@@ -3,12 +3,14 @@ import { useApp } from '../../context/AppContext';
 import { securityThreats, securityAgencies, borderManagementData } from '../../data/securityData';
 import { 
   ShieldAlert, Shield, Globe, Lock, AlertTriangle, 
-  MapPin, CheckCircle2, Bookmark, ExternalLink 
+  MapPin, CheckCircle2, Bookmark, ExternalLink, Compass
 } from 'lucide-react';
+import { securityComprehensiveData } from '../../data/securityComprehensiveData';
+import { SyllabusSectionView } from '../common/SyllabusSectionView';
 
 export const SecurityView: React.FC = () => {
   const { userState, toggleBookmark } = useApp();
-  const [subTab, setSubTab] = useState<'threats' | 'borders' | 'forces' | 'cyber'>('threats');
+  const [subTab, setSubTab] = useState<'syllabus' | 'threats' | 'borders' | 'forces' | 'cyber'>('syllabus');
   const [selectedThreatId, setSelectedThreatId] = useState<string>(securityThreats[0].id);
   const [selectedAgencyId, setSelectedAgencyId] = useState<string>(securityAgencies[0].id);
 
@@ -38,6 +40,7 @@ export const SecurityView: React.FC = () => {
         {/* Sub-tab Navigation Pills */}
         <div className="flex flex-wrap items-center gap-1.5 bg-slate-800/80 p-1.5 rounded-xl border border-slate-700/80">
           {[
+            { id: 'syllabus', label: 'Syllabus Master', icon: Compass },
             { id: 'threats', label: 'Threat Matrix', icon: ShieldAlert },
             { id: 'borders', label: 'Border Management', icon: MapPin },
             { id: 'forces', label: 'Security Forces', icon: Shield },
@@ -62,6 +65,11 @@ export const SecurityView: React.FC = () => {
           })}
         </div>
       </div>
+
+      {/* 0. Syllabus Master Sub-tab */}
+      {subTab === 'syllabus' && (
+        <SyllabusSectionView sections={securityComprehensiveData} accentColor="rose" />
+      )}
 
       {/* 1. Threat Matrix Sub-tab */}
       {subTab === 'threats' && (

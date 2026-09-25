@@ -3,12 +3,14 @@ import { useApp } from '../../context/AppContext';
 import { speciesDatabase, environmentalConventions, eiaLifecycleSteps } from '../../data/environmentData';
 import { 
   Leaf, Globe, ShieldCheck, AlertTriangle, 
-  Layers, CheckCircle2, Bookmark, Info
+  Layers, CheckCircle2, Bookmark, Info, Compass
 } from 'lucide-react';
+import { environmentComprehensiveData } from '../../data/environmentComprehensiveData';
+import { SyllabusSectionView } from '../common/SyllabusSectionView';
 
 export const EnvironmentView: React.FC = () => {
   const { userState, toggleBookmark } = useApp();
-  const [subTab, setSubTab] = useState<'species' | 'conventions' | 'climate' | 'eia'>('species');
+  const [subTab, setSubTab] = useState<'syllabus' | 'species' | 'conventions' | 'climate' | 'eia'>('syllabus');
   const [selectedSpeciesId, setSelectedSpeciesId] = useState<string>(speciesDatabase[0].id);
 
   const currentSpecies = speciesDatabase.find(s => s.id === selectedSpeciesId) || speciesDatabase[0];
@@ -36,6 +38,7 @@ export const EnvironmentView: React.FC = () => {
         {/* Sub-tab Navigation Pills */}
         <div className="flex flex-wrap items-center gap-1.5 bg-slate-800/80 p-1.5 rounded-xl border border-slate-700/80">
           {[
+            { id: 'syllabus', label: 'Syllabus Master', icon: Compass },
             { id: 'species', label: 'Species Database', icon: Leaf },
             { id: 'conventions', label: 'Conventions', icon: Globe },
             { id: 'climate', label: 'Climate & Net-Zero', icon: ShieldCheck },
@@ -60,6 +63,11 @@ export const EnvironmentView: React.FC = () => {
           })}
         </div>
       </div>
+
+      {/* 0. Syllabus Master Sub-tab */}
+      {subTab === 'syllabus' && (
+        <SyllabusSectionView sections={environmentComprehensiveData} accentColor="emerald" />
+      )}
 
       {/* 1. Species Database Sub-tab */}
       {subTab === 'species' && (

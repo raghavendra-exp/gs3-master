@@ -10,12 +10,14 @@ import {
 import { 
   TrendingUp, Activity, PieChart, Landmark, Clock, 
   HelpCircle, CheckCircle2, AlertTriangle, ArrowRight, 
-  Info, ExternalLink, Calculator, BookOpen, Layers
+  Info, ExternalLink, Calculator, BookOpen, Layers, Compass
 } from 'lucide-react';
+import { planningAndGrowthData } from '../../data/economyPlanningData';
+import { SyllabusSectionView } from '../common/SyllabusSectionView';
 
 export const EconomyView: React.FC = () => {
   const { depthMode, userState, toggleBookmark, saveNote } = useApp();
-  const [subTab, setSubTab] = useState<'concepts' | 'indicators' | 'budget' | 'survey' | 'planning' | 'flow'>('concepts');
+  const [subTab, setSubTab] = useState<'syllabus' | 'concepts' | 'indicators' | 'budget' | 'survey' | 'planning' | 'flow'>('syllabus');
   const [selectedConceptId, setSelectedConceptId] = useState<string>(economyConcepts[0].id);
   const [filterCategory, setFilterCategory] = useState<string>('All');
 
@@ -50,6 +52,7 @@ export const EconomyView: React.FC = () => {
         {/* Sub-tab Navigation Pills */}
         <div className="flex flex-wrap items-center gap-1.5 bg-slate-800/80 p-1.5 rounded-xl border border-slate-700/80">
           {[
+            { id: 'syllabus', label: 'Syllabus Master', icon: Compass },
             { id: 'concepts', label: 'Concepts', icon: BookOpen },
             { id: 'indicators', label: 'Indicator Dashboard', icon: Activity },
             { id: 'budget', label: 'Budget Explorer', icon: Landmark },
@@ -76,6 +79,11 @@ export const EconomyView: React.FC = () => {
           })}
         </div>
       </div>
+
+      {/* 0. Syllabus Master Sub-tab */}
+      {subTab === 'syllabus' && (
+        <SyllabusSectionView sections={planningAndGrowthData} accentColor="emerald" />
+      )}
 
       {/* 1. Concepts Sub-tab */}
       {subTab === 'concepts' && (

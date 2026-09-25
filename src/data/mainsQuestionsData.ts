@@ -210,5 +210,85 @@ export const mainsQuestionsBank: MainsQuestion[] = [
       'Purvanchal flood losses exceed ₹1,500-2,000 crore annually in standing crops.'
     ],
     committeesToMention: ['National Flood Commission (Rashtriya Barh Ayog)', 'Ganga Flood Control Commission (GFCC)', 'Madhav Chitale Committee on Desiltation of Ganga']
+  },
+  {
+    id: 'mains-q-005',
+    exam: 'UPSC',
+    year: 2024,
+    marks: 15,
+    wordLimit: 250,
+    topic: 'Economy',
+    questionText: '“Land reforms in India succeeded in abolishing feudal intermediaries but largely failed in achieving tenancy security and equitable asset redistribution.” Discuss the socio-economic impacts and examine how 21st-century digital land initiatives like SVAMITVA and DILRMP can unlock rural prosperity.',
+    directive: 'Discuss',
+    directiveExplanation: 'Analyze the historical balance sheet of post-independence land reforms (abolition of intermediaries vs tenancy/ceilings failure) and link with contemporary digital property rights.',
+    framework: {
+      introHook: 'Begin by stating that land reforms were conceptualized as the institutional linchpin for breaking feudal agrarian hierarchies and raising agricultural productivity post-1947. Note that while zamindari abolition brought ~20 million tenants into direct contact with the state, structural land inequality remained entrenched.',
+      bodyDimensions: [
+        {
+          dimension: 'Where Land Reforms Succeeded vs Where They Stumbled',
+          points: [
+            'Abolition of Intermediaries: Highly successful; ended revenue farming by Zamindars/Jagirdars and freed large wastelands for state management.',
+            'Tenancy Reforms: Largely backfired; landowners carried out mass evictions under the pretext of "personal cultivation", pushing tenants into informal, unrecorded sharecropping without legal rights.',
+            'Land Ceilings: Dismal failure (<2% of operated area redistributed) due to benami transfers, fictitious divorces, and legal exemptions for plantations and religious trusts.',
+            'Consolidation of Holdings: Confined geographically to the Green Revolution belt (Punjab, Haryana, Western UP).'
+          ]
+        },
+        {
+          dimension: '21st Century Digital Interventions: SVAMITVA & DILRMP',
+          points: [
+            'SVAMITVA Scheme: Uses drone survey technology to map inhabited rural Abadi parcels, issuing legal "Property Cards" that eliminate boundary disputes and allow villagers to monetize land as loan collateral.',
+            'DILRMP (Digital India Land Records Modernization Programme): Computerizes Records of Rights (RoRs), digitizes cadastral maps, and links sub-registrar deeds to curb fraudulent double-mortgaging.',
+            'Model Land Leasing Act 2016: Formalizes agricultural tenancy without threatening landowners’ titles, enabling tenant farmers to access institutional credit, PM-KISAN, and PMFBY insurance.'
+          ]
+        }
+      ],
+      conclusionOutlook: 'Conclude that shifting the land discourse from "physical redistribution" to "digital titling, secure leasing, and dispute-free monetization" is essential for transforming rural India from subsistence agriculture into a capital-generating asset economy.'
+    },
+    diagramSuggestion: 'Comparative Quadrant Flowchart: (1) Intermediaries Abolished (Success) vs (2) Tenancy Reforms (Informalized) vs (3) Land Ceilings (Benami Loophole) -> Solution: SVAMITVA Drone Mapping + DILRMP Digital RoR -> Institutional Credit Access.',
+    dataToCite: [
+      'Small and marginal farmers (<2 hectares) constitute 86.2% of total operational holdings in India (Agriculture Census).',
+      'Over 60% of all civil court litigation in India originates from property and land boundary disputes (NITI Aayog).'
+    ],
+    committeesToMention: ['Kumarappa Committee (Agrarian Reforms Committee 1949)', 'T. Haque Committee on Model Land Leasing Act (2016)', 'NITI Aayog Committee on Land Titling']
+  },
+  {
+    id: 'mains-q-006',
+    exam: 'UPSC',
+    year: 2024,
+    marks: 15,
+    wordLimit: 250,
+    topic: 'Internal Security',
+    questionText: 'The suspension of the Free Movement Regime (FMR) along the 1,643 km Indo-Myanmar border marks a paradigm shift from porous border management to border sealing. Critically examine the security imperatives behind this decision and the ethnic and diplomatic challenges it poses for India’s Act East Policy.',
+    directive: 'Critically Examine',
+    directiveExplanation: 'Analyze the national security drivers (illegal migration, insurgent transit, narco-trafficking) versus local socio-cultural disruption and diplomatic relations with Naypyidaw.',
+    framework: {
+      introHook: 'Define the Free Movement Regime (FMR) established in 2018 under India’s Act East Policy, which permitted border residents on both sides to travel up to 16 km inside each other’s territory without visas. Note the early 2024 announcement by MHA terminating the FMR and sanctioning comprehensive smart border fencing.',
+      bodyDimensions: [
+        {
+          dimension: 'Security Imperatives Driving FMR Suspension',
+          points: [
+            'Insurgent Safe Havens: Insurgent outfits (Meitei valley groups like UNLF/PLA and Naga factions) exploit FMR to strike in Manipur and retreat into camps in Myanmar’s Sagaing region.',
+            'Golden Triangle Narco-Terrorism: Porous borders allow massive inflow of synthetic drugs (methamphetamine, Yaba tablets) and heroin from Myanmar, financing local militant groups.',
+            'Civil War Fallout in Myanmar: Post-2021 military coup and Operation 1027 triggered influx of thousands of refugees, Chin migrants, and deserting Myanmar soldiers into Mizoram and Manipur, straining local resources and upsetting demographic balances.',
+            'Cross-Border Infiltration & Arms Smuggling: Unregulated movement facilitates the smuggling of Chinese-made assault rifles and drone components.'
+          ]
+        },
+        {
+          dimension: 'Socio-Cultural, Ethnic & Diplomatic Repercussions',
+          points: [
+            'Divided Kinship: Border artificially cuts across ethnically contiguous tribes (Kuki-Zo-Chin-Mizo communities and Nagas living on both sides of the border); strong political opposition in Mizoram and Nagaland.',
+            'Diplomatic Delicate Balance: Requires cooperation with Myanmar’s military Junta (Tatmadaw) which controls shrinking border territory opposite ethnic armed organizations (ARAKAN Army, CNF).',
+            'Friction with Act East Connectivity: Border sealing and rigid visa checkpoints could hinder border trade corridors (Kaladan Multi-Modal Transit Transport Project, India-Myanmar-Thailand Trilateral Highway).'
+          ]
+        }
+      ],
+      conclusionOutlook: 'Conclude that while territorial integrity necessitates border regulation, physical fencing must be accompanied by biometric smart checkpoints, local community consultation, and accelerated development under the Border Area Development Programme (BADP).'
+    },
+    diagramSuggestion: 'Border Geography Schematic: Northeast States (Arunachal, Nagaland, Manipur, Mizoram) <---> 1,643 km Border <---> Myanmar (Sagaing / Chin State). Highlight: Golden Triangle narcotics inflow + Cross-border ethnic kinship zones.',
+    dataToCite: [
+      'Four Indian states share the 1,643 km border with Myanmar: Arunachal Pradesh (520 km), Nagaland (215 km), Manipur (398 km), and Mizoram (510 km).',
+      'Assam Rifles is the designated border guarding force deploying 20+ battalions along this frontier.'
+    ],
+    committeesToMention: ['Madhukar Gupta Committee on Border Protection', 'Kargil Review Committee recommendations on Border Management', 'MHA High-Level Committee on Northeast Border Security']
   }
 ];

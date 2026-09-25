@@ -3,12 +3,14 @@ import { useApp } from '../../context/AppContext';
 import { techPillars, spaceMissions } from '../../data/scienceData';
 import { 
   Cpu, Rocket, Dna, ShieldCheck, Binary, 
-  CheckCircle2, AlertTriangle, ExternalLink, Bookmark
+  CheckCircle2, AlertTriangle, ExternalLink, Bookmark, Compass
 } from 'lucide-react';
+import { scienceComprehensiveData } from '../../data/scienceComprehensiveData';
+import { SyllabusSectionView } from '../common/SyllabusSectionView';
 
 export const ScienceView: React.FC = () => {
   const { userState, toggleBookmark } = useApp();
-  const [subTab, setSubTab] = useState<'pillars' | 'space' | 'quantum' | 'ipr'>('pillars');
+  const [subTab, setSubTab] = useState<'syllabus' | 'pillars' | 'space' | 'quantum' | 'ipr'>('syllabus');
   const [selectedTechId, setSelectedTechId] = useState<string>(techPillars[0].id);
 
   const currentTech = techPillars.find(t => t.id === selectedTechId) || techPillars[0];
@@ -36,6 +38,7 @@ export const ScienceView: React.FC = () => {
         {/* Sub-tab Navigation Pills */}
         <div className="flex flex-wrap items-center gap-1.5 bg-slate-800/80 p-1.5 rounded-xl border border-slate-700/80">
           {[
+            { id: 'syllabus', label: 'Syllabus Master', icon: Compass },
             { id: 'pillars', label: 'Tech Pillars', icon: Cpu },
             { id: 'space', label: 'ISRO Space Missions', icon: Rocket },
             { id: 'quantum', label: 'Quantum & Fabs', icon: Binary },
@@ -60,6 +63,11 @@ export const ScienceView: React.FC = () => {
           })}
         </div>
       </div>
+
+      {/* 0. Syllabus Master Sub-tab */}
+      {subTab === 'syllabus' && (
+        <SyllabusSectionView sections={scienceComprehensiveData} accentColor="indigo" />
+      )}
 
       {/* 1. Tech Pillars Sub-tab */}
       {subTab === 'pillars' && (

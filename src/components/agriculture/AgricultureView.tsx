@@ -10,12 +10,14 @@ import {
 import { 
   Sprout, MapPin, Droplets, DollarSign, Truck, 
   CheckCircle2, AlertTriangle, ArrowRight, Layers, 
-  HelpCircle, Info
+  HelpCircle, Info, Compass
 } from 'lucide-react';
+import { agricultureComprehensiveData } from '../../data/agriComprehensiveData';
+import { SyllabusSectionView } from '../common/SyllabusSectionView';
 
 export const AgricultureView: React.FC = () => {
   const { userState, toggleBookmark } = useApp();
-  const [subTab, setSubTab] = useState<'crops' | 'states' | 'irrigation' | 'msp' | 'pds' | 'processing'>('crops');
+  const [subTab, setSubTab] = useState<'syllabus' | 'crops' | 'states' | 'irrigation' | 'msp' | 'pds' | 'processing'>('syllabus');
   const [selectedCropId, setSelectedCropId] = useState<string>(majorCropsData[0].id);
   const [selectedStateId, setSelectedStateId] = useState<string>(stateAgriProfiles[0].id);
 
@@ -45,6 +47,7 @@ export const AgricultureView: React.FC = () => {
         {/* Sub-tab Navigation Pills */}
         <div className="flex flex-wrap items-center gap-1.5 bg-slate-800/80 p-1.5 rounded-xl border border-slate-700/80">
           {[
+            { id: 'syllabus', label: 'Syllabus Master', icon: Compass },
             { id: 'crops', label: 'Crop Master', icon: Sprout },
             { id: 'states', label: 'State Agri Explorer', icon: MapPin },
             { id: 'irrigation', label: 'Irrigation Matrix', icon: Droplets },
@@ -71,6 +74,11 @@ export const AgricultureView: React.FC = () => {
           })}
         </div>
       </div>
+
+      {/* 0. Syllabus Master Sub-tab */}
+      {subTab === 'syllabus' && (
+        <SyllabusSectionView sections={agricultureComprehensiveData} accentColor="green" />
+      )}
 
       {/* 1. Crop Master Sub-tab */}
       {subTab === 'crops' && (
