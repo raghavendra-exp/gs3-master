@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { SyllabusSection } from '../../data/economyPlanningData';
+import { pdfBooksDatabase } from '../../data/pdfBooksData';
 import { 
   BookOpen, HelpCircle, CheckCircle2, AlertCircle, 
   Lightbulb, Layers, ShieldCheck, ArrowRight, Table,
-  TrendingUp, FileText, Bookmark, Share2
+  TrendingUp, FileText, Bookmark, Share2, ExternalLink, Download
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 
@@ -24,6 +25,23 @@ export const SyllabusSectionView: React.FC<SyllabusSectionViewProps> = ({
   if (!currentSection) return null;
 
   const isBookmarked = userState.bookmarks.includes(currentSection.id);
+
+  const getCategoryForSection = (cat: string, accent: string) => {
+    if (accent === 'green') return 'Agriculture';
+    if (accent === 'indigo') return 'Science & Tech';
+    if (accent === 'sky') return 'Disaster Management';
+    if (accent === 'rose') return 'Internal Security';
+    if (accent === 'emerald') {
+      if (cat.includes('Biodiversity') || cat.includes('Pollution') || cat.includes('EIA')) {
+        return 'Environment';
+      }
+      return 'Economy';
+    }
+    return 'Economy';
+  };
+
+  const targetSubject = getCategoryForSection(currentSection.category, accentColor);
+  const relevantBooks = pdfBooksDatabase.filter(b => b.category === targetSubject).slice(0, 3);
 
   // Dynamic color mappings
   const colorStyles: Record<string, {
@@ -311,6 +329,87 @@ export const SyllabusSectionView: React.FC<SyllabusSectionViewProps> = ({
                         <span>{feat}</span>
                       </div>
                     ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Recommended NCERTs & Official PDF Books for this Module */}
+        {relevantBooks.length > 0 && (
+          <div className="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
+              <div>
+                <h3 className="text-sm font-extrabold uppercase tracking-wider text-slate-200 flex items-center gap-2">
+                  <BookOpen size={16} className={style.textAccent} />
+                  <span>Recommended NCERTs & Official Government PDFs</span>
+                </h3>
+                <p className="text-[11px] text-slate-400 mt-0.5">
+                  Authoritative open-access textbooks & reports pertaining to {currentSection.category} ({targetSubject})
+                </p>
+              </div>
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start sm:self-auto">
+                Open-Access PDFs
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+              {relevantBooks.map((book) => (
+                <div 
+                  key={book.id}
+                  className="bg-slate-850 rounded-xl p-4 border border-slate-800 flex flex-col justify-between space-y-3 hover:border-slate-750 transition-all"
+                >
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="text-[10px] font-bold text-slate-400">
+                        {book.authorOrPublisher} {book.classOrLevel ? `• ${book.classOrLevel}` : ''}
+                      </span>
+                      <span className={`text-[9px] font-bold px-2 py-0.5 rounded-full border ${
+                        book.readingPriority === 'Must Read' 
+                          ? 'bg-rose-500/20 text-rose-300 border-rose-500/30'
+                          : book.readingPriority === 'High Yield'
+                          ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30'
+                          : 'bg-sky-500/20 text-sky-300 border-sky-500/30'
+                      }`}>
+                        {book.readingPriority}
+                      </span>
+                    </div>
+
+                    <h4 className="text-xs font-bold text-white line-clamp-2">
+                      {book.title}
+                    </h4>
+
+                    <p className="text-[11px] text-slate-300 line-clamp-3 leading-relaxed">
+                      {book.description}
+                    </p>
+
+                    {/* Key Chapters Preview */}
+                    <div className="pt-2 border-t border-slate-800/80 space-y-1">
+                      <span className="text-[10px] font-extrabold uppercase text-slate-400 block tracking-wider">
+                        Focus Chapters for GS-III:
+                      </span>
+                      <ul className="text-[10px] text-slate-300 space-y-1">
+                        {book.keyChapters.slice(0, 2).map((ch, chIdx) => (
+                          <li key={chIdx} className="line-clamp-1 flex items-start gap-1">
+                            <span className={style.textAccent}>•</span>
+                            <span>{ch}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="pt-2 border-t border-slate-800/80">
+                    <a
+                      href={book.pdfUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-full py-2 px-3 rounded-lg text-xs font-bold flex items-center justify-center gap-1.5 transition-all ${style.btnActive} shadow-xs hover:opacity-95`}
+                    >
+                      <span>Read / Download PDF</span>
+                      <ExternalLink size={13} />
+                    </a>
                   </div>
                 </div>
               ))}

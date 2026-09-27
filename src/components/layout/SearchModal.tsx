@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useApp } from '../../context/AppContext';
-import { Search, X, ArrowRight, Lightbulb, TrendingUp, Sprout, Cpu, Leaf, ShieldAlert, FileText, CheckSquare } from 'lucide-react';
+import { Search, X, ArrowRight, Lightbulb, TrendingUp, Sprout, Cpu, Leaf, ShieldAlert, FileText, CheckSquare, BookOpen } from 'lucide-react';
 import { signatureIssues } from '../../data/issueAnalyserData';
 import { economyConcepts, economicIndicators } from '../../data/economyData';
 import { majorCropsData } from '../../data/agricultureData';
@@ -16,6 +16,7 @@ import { agricultureComprehensiveData } from '../../data/agriComprehensiveData';
 import { scienceComprehensiveData } from '../../data/scienceComprehensiveData';
 import { environmentComprehensiveData } from '../../data/environmentComprehensiveData';
 import { securityComprehensiveData } from '../../data/securityComprehensiveData';
+import { pdfBooksDatabase } from '../../data/pdfBooksData';
 
 interface SearchResult {
   id: string;
@@ -306,6 +307,27 @@ export const SearchModal: React.FC = () => {
       }
     });
 
+    // Search NCERT & Official PDF Books Hub
+    pdfBooksDatabase.forEach(item => {
+      if (
+        item.title.toLowerCase().includes(q) ||
+        item.authorOrPublisher.toLowerCase().includes(q) ||
+        (item.classOrLevel && item.classOrLevel.toLowerCase().includes(q)) ||
+        item.description.toLowerCase().includes(q) ||
+        item.tags.some(t => t.toLowerCase().includes(q)) ||
+        item.keyChapters.some(c => c.toLowerCase().includes(q))
+      ) {
+        res.push({
+          id: item.id,
+          title: item.title,
+          category: `PDF Book • ${item.authorOrPublisher}${item.classOrLevel ? ` (${item.classOrLevel})` : ''}`,
+          snippet: `[${item.readingPriority}] ${item.description.slice(0, 120)}...`,
+          targetTab: 'library',
+          icon: BookOpen
+        });
+      }
+    });
+
     setResults(res.slice(0, 15)); // top 15 results
   }, [searchTerm]);
 
@@ -333,7 +355,7 @@ export const SearchModal: React.FC = () => {
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Type any GS-III term: MSP, NISAR, GIB, FRBM, PMLA, DSR, AI..."
+            placeholder="Search GS-III: NCERT, Macroeconomics, MSP, NISAR, GIB, FRBM, Sendai..."
             className="w-full bg-transparent text-white text-sm focus:outline-none placeholder-slate-400"
           />
           {searchTerm && (

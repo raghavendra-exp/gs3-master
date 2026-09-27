@@ -442,6 +442,21 @@ export interface CommitteeItem {
   source: string;
 }
 
+export interface PdfBookItem {
+  id: string;
+  title: string;
+  authorOrPublisher: string; // 'NCERT' | 'Ministry of Finance' | 'NITI Aayog' | 'NDMA' | 'UNDRR' | 'FSI' | 'MHA'
+  category: 'Economy' | 'Agriculture' | 'Science & Tech' | 'Environment' | 'Disaster Management' | 'Internal Security' | 'General GS-III';
+  classOrLevel?: string; // e.g., 'Class 11', 'Class 12', 'Apex Report'
+  readingPriority: 'Must Read' | 'High Yield' | 'Selective Reference';
+  description: string;
+  keyChapters: string[];
+  pdfUrl: string;
+  fileType: 'PDF' | 'Official Portal' | 'Interactive Book';
+  sizeOrVolume?: string;
+  tags: string[];
+}
+
 // ------------------------------------
 // User Progress & Storage Types
 // ------------------------------------
