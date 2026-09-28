@@ -59,7 +59,7 @@ export const Navbar: React.FC<{ onToggleMobileSidebar: () => void; isMobileSideb
           </div>
 
           {/* Center Quick Global Search */}
-          <div className="flex-1 max-w-md mx-4 hidden md:block">
+          <div className="flex-1 max-w-md mx-4 hidden lg:block">
             <button
               onClick={() => setIsSearchModalOpen(true)}
               className="w-full flex items-center justify-between px-3.5 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-800 text-slate-400 text-xs border border-slate-700/60 shadow-inner group transition-all"
@@ -75,12 +75,12 @@ export const Navbar: React.FC<{ onToggleMobileSidebar: () => void; isMobileSideb
           </div>
 
           {/* Right Mode Selectors */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
             
             {/* Mobile Search Button */}
             <button
               onClick={() => setIsSearchModalOpen(true)}
-              className="md:hidden p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white"
+              className="lg:hidden p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white"
               aria-label="Search"
             >
               <Search size={18} />
@@ -104,7 +104,7 @@ export const Navbar: React.FC<{ onToggleMobileSidebar: () => void; isMobileSideb
             </div>
 
             {/* Depth Mode: Explain Like I'm New */}
-            <div className="flex items-center bg-slate-800/90 rounded-lg p-0.5 border border-slate-700/80 text-xs">
+            <div className="hidden lg:flex items-center bg-slate-800/90 rounded-lg p-0.5 border border-slate-700/80 text-xs">
               <span className="hidden xl:inline-block px-2 text-[10px] uppercase font-bold text-slate-400 tracking-wider">
                 Depth:
               </span>
