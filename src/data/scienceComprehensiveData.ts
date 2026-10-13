@@ -118,7 +118,7 @@ export const scienceComprehensiveData: SyllabusSection[] = [
         description: 'From sounding rockets to LVM3, Gaganyaan, and reusable space systems.',
         points: [
           'Launch Vehicle Hierarchy: (1) PSLV (Workhorse - 4 stages: Solid-Liquid-Solid-Liquid; placed Chandrayaan-1 and Mangalyaan into orbit); (2) GSLV Mk II (3 stages with indigenous Cryogenic Upper Stage - CE-7.5); (3) LVM3 (Bahubali - 2 solid S200 boosters, core liquid L110, cryogenic C25 engine; lifts 4 tonnes to GTO; launched Chandrayaan-3); (4) SSLV (Small Satellite Launch Vehicle - 3 solid stages; 500 kg payload to LEO for commercial rapid turnarounds).',
-          'Key Milestones: Chandrayaan-3 (historic soft landing near Lunar South Pole, Shiv Shakti Point); Aditya-L1 (halo orbit around Sun-Earth Lagrangian Point L1); XPoSat (X-ray polarimetry space observatory - 2nd in the world after NASA); Gaganyaan (India’s 1st crewed spaceflight to 400 km LEO).',
+          'Key Milestones: Chandrayaan-3 (historic soft landing near Lunar South Pole, Shiv Shakti Point); Aditya-L1 (halo orbit around Sun-Earth Lagrangian Point L1); XPoSat (X-ray polarimetry space observatory); Gaganyaan (India’s 1st crewed spaceflight to 400 km LEO); Shukrayaan-1 (Venus Orbiter Mission approved by Cabinet in 2024 to study Venusian atmospheric chemistry).',
           'Reusable Launch Vehicle (RLV-LEX): Autonomous winged body landing experiments demonstrating hypersonic aerodynamic reentry and autonomous landing runway recovery.'
         ]
       },
@@ -132,10 +132,12 @@ export const scienceComprehensiveData: SyllabusSection[] = [
         ]
       },
       {
-        title: 'Defence Indigenization: Strategic Triad & Missiles',
-        description: 'Completing the nuclear triad and reducing import dependence.',
+        title: 'Defence Indigenization: Strategic Triad, Submarines & Ballistic Shields',
+        description: 'Completing the nuclear triad, Project 75I AIP submarines, and indigenous BMD shields.',
         points: [
           'Strategic Nuclear Triad: Land-based ballistic missiles (Agni-V with MIRV - Multiple Independently Targetable Re-entry Vehicle tested under Mission Divyastra); Air-delivered nuclear gravity bombs (Mirage 2000, Rafale); Sea-based survivable second-strike leg (SSBN INS Arihant and INS Arighat with K-15 and K-4 submarine-launched ballistic missiles - SLBMs).',
+          'Submarine Modernization (Project 75 & 75I): Project 75 (Scorpene-class submarines built by Mazagon Dock); Project 75I (procurement of 6 advanced diesel-electric submarines equipped with fuel-cell based Air-Independent Propulsion - AIP, allowing submarines to remain submerged for weeks without surfacing to snorkel).',
+          'Ballistic Missile Defence (BMD) Shield: Two-tier indigenous interceptor system: (1) Prithvi Air Defence (PAD) / Prithvi Defence Vehicle (PDV) for Exo-atmospheric interception at altitudes of 50-80 km; (2) Advanced Air Defence (AAD) / Ashwin for Endo-atmospheric interception at altitudes of 15-30 km, integrated with Swordfish Long Range Tracking Radar.',
           'Missile Arsenal: BrahMos (supersonic cruise missile - Mach 2.8, joint Indo-Russian venture); Astra (indigenous Beyond Visual Range Air-to-Air Missile); Akash (surface-to-air missile with Rajendra radar); Helina / Nag (anti-tank guided missile with thermal imaging seeker).',
           'Naval & Aviation Indigenization: INS Vikrant (India’s 1st indigenous aircraft carrier - IAC-1 built by Cochin Shipyard); LCA Tejas Mk1A (light combat aircraft); Prachand Light Combat Helicopter (LCH, operational at Siachen altitudes); Positive Indigenisation Lists (over 4,000 military items banned from foreign import).'
         ]
@@ -152,6 +154,44 @@ export const scienceComprehensiveData: SyllabusSection[] = [
         prelimsHook: 'Thorium-232 is not itself fissile; it is fertile and must absorb a neutron to transmute into fissile Uranium-233 in a reactor core.',
         mainsHook: '"India’s Three-Stage Nuclear Power Programme is an engineering masterpiece of energy security." Detail its stages, fuel cycles, and current operational status.',
         officialSource: 'Department of Atomic Energy (DAE) / BARC'
+      }
+    ]
+  },
+  {
+    id: 'emerging-tech-it-robotics',
+    title: 'Awareness in IT, Space, Computers, Robotics & Nanotechnology',
+    subTitle: '5G/6G, Open-RAN, AI & LLMs Governance, Drones, Nano-Urea, DNA Vaccines & Biosafety Protocols',
+    category: 'Emerging Tech & AI',
+    description: 'Frontier technological domains reshaping industrial productivity, national security, targeted medicine, and precision agriculture.',
+    coreConcepts: [
+      {
+        title: 'Telecommunications & Computing: 5G, 6G, Open-RAN & IoT',
+        description: 'Next-generation connectivity paradigms and disaggregated cellular architecture.',
+        points: [
+          '5G vs 6G Horizons: 5G delivers ultra-reliable low latency communication (URLLC <1ms), enhanced mobile broadband (eMBB >10 Gbps), and massive machine-type communication (mMTC). India\'s Bharat 6G Vision targets Terahertz (THz) frequencies, integrated sensing-and-communication (ISAC), and intelligent surfaces by 2030.',
+          'Open-RAN (Open Radio Access Network): Disaggregates proprietary hardware and software stacks, enabling multi-vendor interoperability and reducing telecom capital expenditures for indigenous players (C-DOT, Tejas Networks).',
+          'Internet of Things (IoT) & Smart Grid: Interconnected sensor networks enabling real-time telemetry across smart cities, pipeline leak detection, and automated smart power meters.'
+        ],
+        prelimsHook: 'Open-RAN breaks vendor lock-in by utilizing open standards that separate the baseband hardware unit from proprietary cellular software algorithms.',
+        mainsHook: '"Sovereign 5G stack deployment and Bharat 6G development are critical for cyber sovereignty." Discuss technological opportunities and supply chain vulnerabilities.'
+      },
+      {
+        title: 'Artificial Intelligence, LLMs, Neural Governance & Robotics',
+        description: 'Generative algorithms, machine reasoning ethics, and autonomous robotic operations.',
+        points: [
+          'Generative AI & LLMs: Foundational Transformer models trained on vast multimodal datasets capable of human-like language synthesis, code generation, and synthetic protein design.',
+          'AI Governance Framework: Regulating algorithmic opacity ("black box" problem), deepfake synthetic media, intellectual property infringement, and automated weapon system ethics. Bletchley Park AI Safety Declaration and India AI Mission ($1.25 Billion outlay establishing 10,000+ GPUs compute capacity).',
+          'Robotics & Drones in Civilian and Military Domains: Drone Rules 2021 liberalized airspace zoning (Green, Yellow, Red zones on DigitalSky platform). Applications: SVAMITVA village property mapping, Kisan drone spraying, organ transit corridors, and Loitering Munitions (Kamikaze drones) in high-altitude border security.'
+        ]
+      },
+      {
+        title: 'Nanotechnology & Nanomaterials: Agriculture & Medicine',
+        description: 'Engineering matter at 1-100 nanometers for breakthrough surface reactivity.',
+        points: [
+          'Nanotechnology in Agriculture (IFFCO Nano-Urea Liquid): Conventional urea exhibits poor nitrogen use efficiency (only 30-40% absorbed; remainder leaches into groundwater or volatilizes into N2O greenhouse gas). Nano-urea nanoparticles (20-50 nm) achieve >80% nutrient uptake through plant stomata, slashing chemical runoff.',
+          'Targeted Drug Delivery: Carbon nanotubes, liposomes, and dendrimers engineered to encapsulate cytotoxic chemotherapy drugs and release payload exclusively inside tumor microenvironments, eliminating systemic side effects.',
+          'Biosafety & Plasmid DNA Vaccines: ZyCoV-D (developed by Zydus Cadila) was the world\'s first plasmid DNA vaccine approved in humans; uses needle-free PharmaJet applicator; thermostable and eliminates cold-chain vulnerabilities.'
+        ]
       }
     ]
   },

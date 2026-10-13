@@ -25,8 +25,8 @@ export const PyqView: React.FC = () => {
 
   const currentPyq = pyqDatabase.find(q => q.id === selectedPyqId) || pyqDatabase[0];
 
-  const exams = ['All', 'UPSC_MAINS', 'UPSC_PRELIMS', 'UPPSC_MAINS', 'UPPSC_PRELIMS'];
-  const topics = ['All', 'Economy', 'Agriculture', 'Science & Tech', 'Environment', 'Disaster Management', 'Internal Security'];
+  const exams = ['All', 'UPSC_MAINS', 'UPSC_PRELIMS', 'UPPSC_MAINS', 'UPPSC_PRELIMS', 'UP_RO_ARO'];
+  const topics = ['All', 'Economy', 'Agriculture', 'Infrastructure', 'Science & Tech', 'Environment', 'Disaster Management', 'Internal Security'];
 
   return (
     <div className="max-w-7xl mx-auto space-y-6">

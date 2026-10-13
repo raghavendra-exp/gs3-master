@@ -37,9 +37,42 @@ export const planningAndGrowthData: SyllabusSection[] = [
   {
     id: 'planning-evolution',
     title: 'Planning in Economic Development',
-    subTitle: 'Imperative vs Indicative vs Structural Planning, Planning Commission vs NITI Aayog',
+    subTitle: 'Harrod-Domar, Mahalanobis, Rao-Manmohan Models, NITI Aayog Dual Hubs & Strategic Frameworks',
     category: 'Planning',
     description: 'Planning is the conscious, directed utilization of a country’s collective resources to achieve predetermined socio-economic objectives within a defined timeframe.',
+    diagramPrompt: `+-----------------------------------------------------------------------------------+
+|               EVOLUTION OF ECONOMIC PLANNING PARADIGMS IN INDIA                   |
++-----------------------------------------------------------------------------------+
+| 1951-1956: First Plan (Harrod-Domar Model)                                        |
+|  - High savings rate -> Capital Accumulation -> ICOR efficiency -> Agri revival   |
+|                                                                                   |
+| 1956-1961: Second Plan (Feldman-Mahalanobis Heavy Industry Strategy)              |
+|  - Shift to Capital Goods (Machines to produce machines) -> Import Substitution   |
+|                                                                                   |
+| 1966-1969: Plan Holiday (Three Annual Plans - Green Revolution HYV rollout)       |
+| 1978-1980: Rolling Plan (Gunnar Myrdal paradigm - 1-year, 3-5 year, 15-year)     |
+|                                                                                   |
+| 1991-1997: Eighth Plan (Rao-Manmohan Indicative Planning Model)                   |
+|  - Dismantled License-Permit Raj -> Market orientation -> State as Facilitator    |
+|                                                                                   |
+| 2015-Present: NITI Aayog (Cooperative & Competitive Federalism Architecture)      |
+|  +-----------------------------------------------------------------------------+  |
+|  | GOVERNING COUNCIL: PM + All State CMs + UT Lt. Governors (Federal consensus)|  |
+|  +--------------------------------------+--------------------------------------+  |
+|                                         |                                         |
+|                 +-----------------------+-----------------------+                 |
+|                 |                                               |                 |
+|       [TEAM INDIA HUB]                              [KNOWLEDGE & INNOVATION HUB]  |
+|   States-Centre Interface                           Think-Tank Core, Sectoral R&D |
+|   State-specific roadmaps                           SDG Index, Aspirational Dists |
+|                                                                                   |
+|  +-----------------------------------------------------------------------------+  |
+|  | STRATEGIC HORIZONS:                                                         |  |
+|  | 1. 3-Year Action Agenda (Operational roadmaps and budget milestones)        |  |
+|  | 2. 7-Year Strategy ('Strategy for New India @75' - Sectoral transformations)|  |
+|  | 3. 15-Year Vision Document ('Viksit Bharat @2047' long-term compass)        |  |
+|  +-----------------------------------------------------------------------------+  |
++-----------------------------------------------------------------------------------+`,
     coreConcepts: [
       {
         title: 'Types of Planning Paradigms',
@@ -55,6 +88,18 @@ export const planningAndGrowthData: SyllabusSection[] = [
         officialSource: 'Planning Commission Archives / NITI Aayog Charter'
       },
       {
+        title: 'Theoretical Growth Models in Indian Planning: Harrod-Domar, Mahalanobis & Rao-Manmohan',
+        description: 'Analytical mechanics of foundational planning strategies that shaped India’s capital formation.',
+        points: [
+          'Harrod-Domar Model (1st Five-Year Plan 1951-56): Conceptualized growth as a function of the marginal propensity to save/invest and the Incremental Capital-Output Ratio (ICOR): Growth Rate (g) = Savings Rate (s) / ICOR. Focused heavily on agriculture, irrigation projects (Bhakra-Nangal, Damodar Valley), and overcoming post-partition food shortages.',
+          'Feldman-Mahalanobis Heavy Industry Strategy (2nd Five-Year Plan 1956-61): Four-sector model prioritizing the basic capital goods sector (Department I: steel, machinery, coal, energy). Rationale: Producing "machines to make machines" accelerates long-term industrial independence and breaks foreign exchange dependency, despite compressing short-term consumer goods supply.',
+          'Rao-Manmohan Model (8th Five-Year Plan 1992-97 onwards): Post-1991 balance-of-payments crisis framework. Shifted India from an inward-looking import substitution regime to an export-competitive, market-driven indicative framework. Public investment reoriented away from commanding heights of commercial enterprise toward social infrastructure (education, health) and physical connectivity.',
+          'Shortcomings of Mahalanobis Heavy Capital Bias: Neglected wage-goods (agriculture, light textiles) as highlighted by the Vakil-Brahmananda Wage Goods Model; bred high ICOR inefficiencies, bureaucratic red-tape (License-Permit-Quota Raj), and severe under-employment.'
+        ],
+        prelimsHook: 'The Vakil-Brahmananda Wage-Goods Model (1956) was the primary counter-model to Mahalanobis, advocating that rapid employment requires expanding wage-goods (food, consumer goods) rather than heavy machinery.',
+        mainsHook: '"The Mahalanobis model created an industrial foundation at the cost of employment elasticity and agricultural terms of trade." Critically evaluate.'
+      },
+      {
         title: 'Objectives, Achievements & Failures of Indian Planning',
         description: 'Critical balance sheet of 12 Five-Year Plans spanning 1951 to 2017.',
         points: [
@@ -67,14 +112,17 @@ export const planningAndGrowthData: SyllabusSection[] = [
         mainsHook: 'Critically analyze why the Mahalanobis strategy of heavy industrialization failed to generate adequate employment for India’s surplus rural labor force.'
       },
       {
-        title: 'Planning Commission vs. NITI Aayog: Structural Contrast',
-        description: 'Transition from centralized resource allocation to cooperative federalism and think-tank advisory role.',
+        title: 'NITI Aayog Architecture & Strategic Frameworks',
+        description: 'Cooperative federalism architecture, functional hubs, and strategic planning horizons.',
         points: [
-          'Origin: Planning Commission was set up via Executive Resolution in March 1950; NITI Aayog replaced it via Executive Resolution on January 1, 2015.',
-          'Power to Allocate Funds: Planning Commission possessed statutory-like power to disburse central plan funds and discretionary grants to states (often politicized); NITI Aayog has zero financial allocation power (vested with Finance Ministry).',
-          'Top-Down vs Bottom-Up: Planning Commission enforced a "one-size-fits-all" top-down paradigm; NITI Aayog operates on "Cooperative and Competitive Federalism" with all Chief Ministers in the Governing Council.',
-          'Indices Driven: NITI Aayog drives competitive governance through data indices (SDG India Index, State Energy & Climate Index, Export Preparedness Index, Multidimensional Poverty Index).'
-        ]
+          'Governing Council: Chaired by the Prime Minister; comprises Chief Ministers of all States, Chief Ministers of UTs with legislatures (Delhi, Puducherry, J&K), and Lieutenant Governors of other UTs. Institutionalizes consensus-based federal policy formulation.',
+          'Team India Hub: Acts as the dedicated bridge between Central line ministries and State Governments; spearheads custom policy design, addresses state-specific bottlenecks, and champions states’ interests at the Centre.',
+          'Knowledge and Innovation Hub: Serves as the apex public think-tank; generates evidence-based policy research, spearheads Atal Innovation Mission (AIM), and formulates national strategies for frontier sectors (AI, electric mobility, green hydrogen).',
+          'Tripartite Planning Horizon: (1) 3-Year Action Agenda (operational roadmap and expenditure realignment); (2) 7-Year Strategy ("Strategy for New India @75" covering 41 crucial sectors); (3) 15-Year Vision Document (guiding perspective toward "Viksit Bharat @2047").',
+          'Competitive Governance Indices: Drives cooperative-competitive federalism via quantifiable metrics: SDG India Index, State Energy and Climate Index (SECI), Export Preparedness Index (EPI), Composite Water Management Index, and Aspirational Districts Programme (ADP).'
+        ],
+        prelimsHook: 'Unlike the erstwhile Planning Commission, NITI Aayog has zero statutory powers to allocate financial grants or central plan funds to state governments; allocation power rests with the Ministry of Finance.',
+        mainsHook: 'Evaluate the efficacy of NITI Aayog’s Aspirational Districts Programme in transforming governance delivery in India’s most backward administrative units.'
       }
     ],
     comparativeTable: {
@@ -84,6 +132,7 @@ export const planningAndGrowthData: SyllabusSection[] = [
         ['Financial Powers', 'Allocated plan funds and discretionary grants to states', 'Advisory Think-Tank; zero financial allocation powers'],
         ['State Representation', 'National Development Council (NDC) met irregularly', 'Governing Council with all CMs and Lt. Governors actively meets'],
         ['Planning Horizon', 'Rigid Five-Year Plans (1st to 12th Plan)', '15-Year Vision, 7-Year Strategy, 3-Year Action Agenda'],
+        ['Twin Hub Architecture', 'Bureaucratic divisions and sectoral adviser desks', 'Team India Hub (Centre-State) + Knowledge & Innovation Hub'],
         ['Role of Private Sector', 'Marginalized; focus on commanding heights of public sector', 'Engaged actively as strategic development partners']
       ]
     }
@@ -91,9 +140,34 @@ export const planningAndGrowthData: SyllabusSection[] = [
   {
     id: 'resource-mobilisation',
     title: 'Mobilisation of Resources',
-    subTitle: 'Financial, Human, Natural Resources; Tax vs Non-Tax; Public Debt & Banking',
+    subTitle: 'Direct/Indirect Taxation, Article 279A GST Architecture, NMP, InvITs/REITs & Debt Sustainability',
     category: 'Resource Mobilisation',
     description: 'Resource mobilization involves generating, allocating, and efficiently deploying domestic and external financial, human, and physical assets to sustain inclusive economic growth.',
+    diagramPrompt: `+-----------------------------------------------------------------------------------+
+|               RESOURCE MOBILISATION & REVENUE ARCHITECTURE                        |
++-----------------------------------------------------------------------------------+
+| 1. TAXATION ARCHITECTURE                                                          |
+|    +-----------------------------+     +----------------------------------------+ |
+|    | DIRECT TAXATION             |     | INDIRECT TAXATION (GST - Art. 279A)    | |
+|    | - Corporate Tax (22% / 15%) |     | - GST Council: Centre 1/3, States 2/3  | |
+|    | - Faceless Assessment / AIS |     | - 75% Majority required for decisions  | |
+|    | - Vivad se Vishwas dispute  |     | - Inverted Duty Correction & Anti-Prof | |
+|    +-----------------------------+     +----------------------------------------+ |
+|                                                                                   |
+| 2. NON-TAX REVENUES & ASSET MONETISATION                                          |
+|    +--------------------------------------------------------------------------+   |
+|    | DIPAM Disinvestment Policy: Strategic Sale (Mgmt control) vs Minority    |   |
+|    +--------------------------------------------------------------------------+   |
+|    | National Monetisation Pipeline (NMP: Rs. 6 Lakh Crore Brownfield Leasing)|   |
+|    | - Highways (NHAI InvIT)  - Power Grid (InvIT)  - Railways & Telecom      |   |
+|    | - Core asset ownership retained by State; only operational cash-flows run|   |
+|    +--------------------------------------------------------------------------+   |
+|                                                                                   |
+| 3. PUBLIC DEBT & FINANCIAL INTERMEDIATION                                         |
+|    - Domestic Internal Debt (~95% denominated in INR; shielded from forex runs)   |
+|    - External Debt (<5% concessional loans via World Bank / ADB / JICA)           |
+|    - Gross NPA resolution via IBC 2016 -> Multi-year low of ~2.8%                 |
++-----------------------------------------------------------------------------------+`,
     coreConcepts: [
       {
         title: 'Components & Channels of Resource Mobilisation',
@@ -107,6 +181,29 @@ export const planningAndGrowthData: SyllabusSection[] = [
         prelimsHook: 'Net household financial savings dipped to a 5-decade low of ~5.3% of GDP in FY23 as households shifted toward physical assets (real estate) and leveraged retail credit.',
         mainsHook: '"A shallow corporate bond market severely limits long-gestation infrastructure financing in India." Elucidate the structural impediments and propose remedies.',
         officialSource: 'RBI Financial Stability Report / MoF Economic Survey'
+      },
+      {
+        title: 'Taxation Architecture: Direct Tax Reforms & GST Dynamics',
+        description: 'Structural reforms in direct taxation and the cooperative federalism architecture of GST.',
+        points: [
+          'Direct Tax Modernization: (1) Corporate Tax Rate Rationalization: Slashed to 22% for existing companies (without exemptions) and 15% for new domestic manufacturing units under Section 115BAB; (2) Faceless Assessment & Appeals: Removed physical interface between taxpayer and income tax officer, utilizing dynamic algorithmic case allocation to curb corruption; (3) Transparent Taxation: Annual Information Statement (AIS) and Taxpayer Charter; (4) Vivad se Vishwas: Settlement scheme resolving legacy direct tax litigation.',
+          'GST Council Voting Mechanics (Article 279A): Apex decision-making constitutional body on indirect taxation. Voting Weightage: Central Government holds 1/3rd (33.33%) of total votes cast; all State Governments combined hold 2/3rd (66.67%) of total votes cast. Decision Threshold: Every decision requires a weighted majority of not less than 3/4th (75%) of votes cast. Implication: Centre cannot pass a resolution without at least some states, and States cannot unite to pass a resolution without Central concurrence, enforcing institutional consensus.',
+          'GST Operational Dynamics: (1) Composition Scheme: Simplified quarterly tax payment (1% for manufacturers/traders, 5% for restaurants) without Input Tax Credit (ITC) for small businesses with turnover up to ₹1.5 Crore; (2) Inverted Duty Structure: Situation where tax rate on inputs/raw materials is higher than the tax rate on finished output, causing structural accumulation of unutilized ITC and hurting domestic manufacturing competitiveness (addressed iteratively in textiles, footwear, fertilizer); (3) Compensation Cess Dispute: Levied under GST (Compensation to States) Act 2017 to bridge states’ revenue shortfall below 14% compounded growth; extended till March 2026 exclusively to service sovereign loans borrowed during COVID-19 pandemic.',
+          'Anti-Profiteering Framework: Mandated suppliers to pass on tax reductions and ITC benefits to consumers via commensurate price cuts; National Anti-Profiteering Authority (NAA) dissolved and powers transferred to Competition Commission of India (CCI).'
+        ],
+        prelimsHook: 'Under Article 279A of the Constitution, decisions of the GST Council require a weighted majority of 75% of the members present and voting.',
+        mainsHook: '"The GST Council embodies the purest institutional manifestation of cooperative federalism, yet fiscal federalism tensions persist." Analyze.'
+      },
+      {
+        title: 'Non-Tax Revenue & Asset Management: Disinvestment, NMP, InvITs & REITs',
+        description: 'Monetizing sovereign assets and transitioning public enterprise governance.',
+        points: [
+          'Disinvestment Policy Spectrum (DIPAM): Department of Investment and Public Asset Management classifies approaches: (1) Minority Stake Sale: Selling equity through IPO, FPO, or Offer for Sale (OFS) while government retains at least 51% shareholding and administrative control; (2) Strategic Disinvestment: Selling 50% or more equity along with complete transfer of management control to a private buyer (e.g., Air India sale to Tata Group); (3) Strategic PSE Policy 2021: Categorizes sectors into Strategic (bare minimum CPSE presence maintained across Atomic energy, Defence, Transport/Telecom, Power/Petroleum, Banking/Insurance) and Non-Strategic (CPSEs to be privatized, merged, or closed).',
+          'National Monetisation Pipeline (NMP): 4-year pipeline (FY 2022–2025) launched by NITI Aayog targeting ₹6 Lakh Crore. Core Philosophy: Monetizing operational "brownfield" core assets (highways, railway tracks, power transmission lines, oil pipelines, telecom towers) by transferring operating rights to private capital through long-term concessions, while retaining 100% sovereign asset ownership.',
+          'Infrastructure Investment Trusts (InvITs) & REITs: Collective investment vehicles regulated by SEBI that pool capital from retail and institutional investors to acquire income-yielding infrastructure/real estate assets. Public entities (NHAI InvIT, PowerGrid InvIT) utilize them to monetize highway stretches and transmission grids to raise upfront capital for fresh greenfield capex.'
+        ],
+        prelimsHook: 'Under the National Monetisation Pipeline (NMP), the government leases only brownfield operational assets; greenfield projects and sovereign ownership transfer are explicitly excluded.',
+        mainsHook: '"The National Monetisation Pipeline unlocks idle public capital for infrastructure expansion without privatization of assets." Critically examine.'
       },
       {
         title: 'Public Borrowing & Public Debt Dynamics',
@@ -139,45 +236,74 @@ export const planningAndGrowthData: SyllabusSection[] = [
   {
     id: 'growth-development-employment',
     title: 'Growth, Development & Employment',
-    subTitle: 'Jobless Growth, Informalization, PLFS Metrics, LFPR and Workforce Restructuring',
+    subTitle: 'GDP vs GVA Base Year, Jobless Growth, FLFPR U-Curve, Gig Economy & Social Security Code 2020',
     category: 'Growth & Employment',
     description: 'Examining the divergence between headline economic growth and human development, productive employment generation, and structural economic transformation.',
+    diagramPrompt: `+-----------------------------------------------------------------------------------+
+|               STRUCTURAL GROWTH, GVA METRICS & EMPLOYMENT TRAJECTORY             |
++-----------------------------------------------------------------------------------+
+| 1. NATIONAL ACCOUNTS COMPUTATION (2011-12 Base Year Reform):                      |
+|    GVA at Basic Prices = Compensation of Employees + Operating Surplus + CFC      |
+|    GDP at Market Prices = GVA at Basic Prices + Product Taxes - Product Subsidies |
+|                                                                                   |
+| 2. EMPLOYMENT PARADOX & WORKFORCE RESTRUCTURING:                                  |
+|    Agriculture: ~18% GVA | ~45% Workforce  (Massive Disguised Unemployment)       |
+|    Manufacturing: ~15% GVA | ~12% Workforce  (Low Employment Elasticity <0.10)     |
+|    Services:      ~54% GVA | ~30% Workforce  (Capital/Skill Intensive)            |
+|                                                                                   |
+| 3. FEMALE LABOUR FORCE PARTICIPATION (FLFPR) U-SHAPED CURVE:                      |
+|    Subsistence Agri -> Income Effect Withdrawal -> Education Gap -> Modern Formal |
+|    (U-shaped hypothesis: rising household wealth initially lowers female LFPR)    |
+|                                                                                   |
+| 4. GIG ECONOMY & INFORMALITY (Code on Social Security 2020):                      |
+|    Aggregator Contribution: 1-2% annual turnover earmarked for Social Security    |
+|    e-Shram Portal: National Unorganised Workers Database (>29 Crore registrants)  |
++-----------------------------------------------------------------------------------+`,
     coreConcepts: [
       {
-        title: 'Economic Growth vs. Economic Development',
-        description: 'Quantitative output expansion versus qualitative structural and welfare transformation.',
+        title: 'Economic Growth vs. Economic Development & National Accounts',
+        description: 'Quantitative output expansion, base-year revisions, and qualitative structural transformation.',
         points: [
-          'Growth (Quantitative): Increase in real output over time, measured by Real GDP, GVA, or Per Capita National Income; uni-dimensional and value-neutral.',
-          'Development (Qualitative): Multidimensional process encompassing growth PLUS progressive changes in socio-economic structures: poverty reduction, declining inequality, gender parity, universal healthcare, and civil liberties.',
-          'Amartya Sen’s Capability Approach: Development is the expansion of human freedoms and capabilities to lead lives people have reason to value (moving from commodities to functionings).',
-          'Measurement Frameworks: Human Development Index (HDI - Life Expectancy, Mean/Expected Years of Schooling, GNI per capita PPP); Multidimensional Poverty Index (MPI - 10 indicators across Health, Education, Standard of Living); Genuine Progress Indicator (GPI).'
+          'Growth vs Development: Growth measures quantitative expansion of output (Real GDP, GVA, Per Capita Income); Development is a multidimensional normative process encompassing growth plus poverty reduction, reduced inequality, universal healthcare, and capability expansion (Amartya Sen).',
+          'National Accounts Revisions (2011-12 Base Year): Shifted headline growth measurement from GDP at Factor Cost to GDP at Market Prices. Adopted MCA-21 corporate database; introduced Gross Value Added (GVA) at basic prices: GDP (Market Prices) = GVA (Basic Prices) + Product Taxes - Product Subsidies.',
+          'Measurement Frameworks: Human Development Index (HDI: Health via Life Expectancy, Education via Mean/Expected Years of Schooling, Living Standard via GNI per capita PPP); Multidimensional Poverty Index (MPI: NITI Aayog national MPI tracks 12 indicators including nutrition, child mortality, cooking fuel, sanitation, drinking water).',
+          'Genuine Progress Indicator (GPI) & Green GDP: Adjusts conventional GDP by subtracting environmental degradation costs (carbon emissions, soil depletion, biodiversity loss) and adding non-market economic value (household care work).'
         ],
-        prelimsHook: 'India ranks 134th on the UNDP Human Development Index (HDI 2023/24) with an HDI value of 0.644, placing it in the Medium Human Development category.',
+        prelimsHook: 'In national accounts, GVA at basic prices includes production taxes (e.g., stamp duty, land revenue) minus production subsidies, but excludes product taxes (e.g., GST, customs duty) and product subsidies (e.g., food/fertilizer subsidy).',
         mainsHook: '"High GDP growth that fails to translate into human capabilities is fundamentally unsustainable." Discuss in the context of India’s healthcare and learning outcomes.',
         officialSource: 'UNDP HDR / MoSPI National Accounts Statistics'
       },
       {
-        title: 'The Challenge of "Jobless Growth" in India',
+        title: 'The Challenge of "Jobless Growth" & Structural Bottlenecks',
         description: 'Why 7%+ GDP growth has generated inadequate formal, high-productivity jobs.',
         points: [
-          'Employment Elasticity of Growth: Has collapsed from ~0.44 in the 1970s-80s to near 0.10 or lower across manufacturing in recent decades.',
-          'Premature Deindustrialization: India skipped the conventional Kuznets-Lewis structural transition (Agriculture ➔ Manufacturing ➔ Services) by vaulting directly from Agriculture into high-skill, capital-intensive IT/Services.',
-          'The 45-18-54 Anomaly: Agriculture employs ~45% of India’s workforce but contributes only ~18% of GVA; Services generate ~54% of GVA but employ only ~30% of workers.',
-          'Capital-Intensive Manufacturing: Schemes like PLI incentivize capital-deepening and automation rather than labor-absorbing light manufacturing (textiles, leather, toys).'
+          'Employment Elasticity Collapse: Employment elasticity of growth (percentage increase in employment for 1% rise in GDP) has collapsed from ~0.44 during 1970-80s to near 0.10 across manufacturing, meaning output expansion is driven by capital-deepening and automation rather than labor absorption.',
+          'Premature Deindustrialization: India bypassed the classical Kuznets-Lewis structural transition (Agriculture ➔ Manufacturing ➔ Services) by jumping straight from primary agriculture to skill-intensive, capital-intensive IT/Services.',
+          'The 45-18-54 Anomaly: Agriculture generates ~18% of GVA but retains ~45% of total employment; Services generate ~54% of GVA but absorb only ~30% of workers; Manufacturing stagnates around 15% of GDP and 12% of workforce.',
+          'Capital-Intensive Manufacturing: Government schemes such as PLI primarily incentivize high-capex, automated assembly rather than labor-absorbing light manufacturing (textiles, leather, footwear, food processing).'
         ]
       },
       {
-        title: 'Periodic Labour Force Survey (PLFS) Key Terminology',
-        description: 'Standard statistical metrics used by MoSPI to measure employment.',
+        title: 'Female Labour Force Participation Rate (FLFPR) & The Care Economy',
+        description: 'Structural barriers, the U-shaped hypothesis, and unpaid care burdens.',
         points: [
-          'Labour Force Participation Rate (LFPR): Percentage of working-age population (15+) that is either employed or actively seeking work. India’s overall LFPR rose to ~57.9% in 2022-23.',
-          'Female LFPR (FLFPR): Historically low in India (~23-28%); rose to ~37% in recent PLFS primarily driven by unpaid rural family labor and subsistence self-employment (distress-driven).',
-          'Worker Population Ratio (WPR): Percentage of employed persons in the total population.',
-          'Unemployment Rate (UR): Percentage of persons unemployed among the active labor force (declined to 3.2% in PLFS 2023 under Usual Status, though daily status reveals higher underemployment).',
-          'Usual Principal & Subsidiary Status (UPSS) vs Current Weekly Status (CWS): UPSS measures activity over the reference year (captures chronic unemployment); CWS measures activity during the preceding 7 days (captures short-term fluctuations).'
+          'The U-Shaped FLFPR Hypothesis (Claudia Goldin): At low GDP levels, women work out of agricultural necessity. As household income rises, female LFPR declines due to income effect and social status considerations (withdrawal from manual field labor). Only when female education reaches higher thresholds and formal service sector opportunities expand does FLFPR rise again.',
+          'PLFS Trends: Historically depressed around 23-28%; recent PLFS reports showed a rise to ~37-41% driven largely by rural women entering unpaid family labor or subsistence self-employment (distress-driven, not formal job expansion).',
+          'Unpaid Care Burden: Time Use Survey (MoSPI) reveals Indian women spend an average of ~300 minutes/day on unpaid domestic care work versus ~30 minutes by men, restricting female entry into the formal paid economy.',
+          'Policy Interventions: Maternity Benefit (Amendment) Act 2017 (26 weeks paid leave, mandatory creche in establishments with 50+ employees); Mission Shakti (Sambal for safety, Samarthya for empowerment).'
+        ]
+      },
+      {
+        title: 'Gig Economy, Informalization & Social Security Code 2020',
+        description: 'Platform workers, contractualization, and unorganized welfare frameworks.',
+        points: [
+          'Definitions under Code on Social Security 2020: (1) Gig Worker: A person who performs work or participates in a work arrangement and earns from such activities outside of a traditional employer-employee relationship; (2) Platform Worker: A worker undertaking gig work accessed via online digital platforms/apps.',
+          'Social Security Funding Mandate: The 2020 Code requires digital aggregators (ride-hailing, food delivery, logistics) to contribute 1% to 2% of their annual turnover (capped at 5% of amount payable to gig workers) into a National Social Security Board fund.',
+          'e-Shram Portal: National database of unorganised workers seeded with Aadhaar, registering over 29 Crore workers with occupational classification (NCO codes) to facilitate portable welfare delivery.',
+          'Periodic Labour Force Survey (PLFS) Terminology: LFPR (working age 15+ in labor force); WPR (employed ratio); Unemployment Rate (UR declined to ~3.2% in UPSS); UPSS (Usual Principal & Subsidiary Status - chronic status over 365 days) vs CWS (Current Weekly Status - preceding 7 days, captures seasonal slackness).'
         ],
-        prelimsHook: 'In PLFS methodology, a person who worked for even 1 hour on any day during the reference week is categorized as employed under Current Weekly Status (CWS).',
-        mainsHook: 'Distinguish between open unemployment, disguised unemployment, and underemployment. Why is disguised unemployment the primary drag on rural wage growth?'
+        prelimsHook: 'Under the Code on Social Security 2020, aggregator contributions to the social security fund for gig and platform workers are capped at 5% of the aggregate amount payable to such workers.',
+        mainsHook: '"The gig economy offers flexible livelihood generation at the expense of tenure security and collective bargaining." Analyze in light of recent state legislations (Rajasthan Platform Based Gig Workers Act).'
       }
     ],
     schemesAndPolicies: [
@@ -201,31 +327,79 @@ export const planningAndGrowthData: SyllabusSection[] = [
   {
     id: 'inclusive-growth-budgeting',
     title: 'Inclusive Growth & Government Budgeting',
-    subTitle: '12th FYP Elements, Deficit Indicators, 2017 Budget Reforms, FRBM Act',
+    subTitle: 'Kuznets/Lorenz Curves, Parliamentary Procedures, Deficit Metrics, FRBM & Budget Typologies',
     category: 'Budgeting & Inclusive Growth',
     description: 'Comprehensive analysis of equitable wealth distribution, social inclusion metrics, budgetary architecture, and sovereign fiscal consolidation.',
+    diagramPrompt: `+-----------------------------------------------------------------------------------+
+|            INCLUSIVE GROWTH, INEQUALITY CURVES & BUDGETARY PROCEDURES             |
++-----------------------------------------------------------------------------------+
+| 1. THEORIES & METRICS OF DISTRIBUTION:                                            |
+|    - Kuznets Curve: Inverted U-hypothesis (Growth vs Inequality)                  |
+|    - Lorenz Curve & Gini Coefficient: Cumulative population vs Income shares      |
+|    - Palma Ratio: Top 10% income share / Bottom 40% income share                  |
+|                                                                                   |
+| 2. FINANCIAL INCLUSION TRINITY:                                                   |
+|    [PMJDY Zero-Balance Bank Accounts] + [Aadhaar Biometric] + [Mobile Telephony]  |
+|    ===> Direct Benefit Transfer (DBT) -> Eliminates ghost beneficiaries           |
+|                                                                                   |
+| 3. PARLIAMENTARY BUDGET PROCEDURES & LEGISLATIVE CONTROL:                         |
+|    - Art. 112: Annual Financial Statement (Consolidated, Contingency, Public Acct)|
+|    - Art. 113: Demands for Grants | Cut Motions (Policy, Economy, Token)         |
+|    - Art. 114: Appropriation Bill (Statutory sanction to withdraw from CFI)       |
+|    - Art. 110: Finance Bill (Taxation proposals enacted as Money Bill)            |
+|    - Guillotine Closure: Undiscussed demands put to vote en bloc when time elapses|
+|                                                                                   |
+| 4. MODERN BUDGETING TYPOLOGIES:                                                   |
+|    - Performance Budgeting: Inputs -> Outputs linkage                             |
+|    - Outcome Budgeting: Physical tangible deliverables & outcomes tracked         |
+|    - Zero-Based Budgeting (ZBB): Every item justified from scratch (zero base)    |
+|    - Gender Budgeting: Statement 20 (Part A: 100% women; Part B: >=30% women)     |
++-----------------------------------------------------------------------------------+`,
     coreConcepts: [
       {
-        title: 'Inclusive Growth: Dimensions & Measurement',
-        description: 'Growth that creates opportunities for all segments of population and distributes dividends equitably.',
+        title: 'Theories & Metrics of Distribution: Lorenz, Gini & Kuznets Hypothesis',
+        description: 'Analytical measurement of multi-dimensional income and wealth inequality.',
         points: [
-          'Definition (12th FYP): "Faster, Sustainable, and More Inclusive Growth" ensuring poverty reduction, regional balance, gender empowerment, and environmental sustainability.',
-          'Core Elements: Pro-Poor Growth, Human Capital Formation (Education & Healthcare), Social Safety Nets, Productive Employment, Financial Inclusion (JAM Trinity), and Infrastructure Access.',
-          'Inequality Indices: Gini Coefficient (0 = perfect equality, 1 = absolute inequality); Lorenz Curve (graphical cumulative income distribution); Palma Ratio (income share of top 10% divided by bottom 40%).',
-          'Major Stumbling Blocks: Rural-urban developmental divide, unequal asset ownership (top 1% owning >40% of national wealth according to World Inequality Lab), informal labor traps.'
+          'Kuznets Curve Hypothesis (Simon Kuznets): Postulates an inverted U-curve relationship between economic growth and income inequality. In early stages of industrialization, inequality widens as rural workers migrate to higher-paying urban factories. Later, as wealth diffuses, democratization advances, and welfare states develop, inequality automatically declines.',
+          'Contestation in India: Piketty and Chancel data shows that post-1991 reforms, India’s top 1% income share surged to over 22% and wealth share crossed 40%, while the bottom 50% captured only 15% of national income, indicating that growth alone does not automatically compress inequality without progressive wealth taxes and public spending on social goods.',
+          'Lorenz Curve: Graphical representation of wealth distribution plotting cumulative percentage of population against cumulative percentage of income earned. The 45-degree diagonal represents the "Line of Perfect Equality".',
+          'Gini Coefficient: Ratio of the area between the Lorenz curve and the line of perfect equality to the total area under the line of perfect equality (G = A / (A + B)). Value ranges from 0 (perfect equality) to 1 (absolute inequality).',
+          'Palma Ratio: Alternative inequality metric defined as the ratio of the richest 10% of the population’s share of gross national income divided by the poorest 40%’s share. Avoids the middle 50% whose income share remains stable across nations.'
+        ],
+        prelimsHook: 'The Gini Coefficient is equal to twice the area between the Lorenz Curve and the 45-degree Line of Perfect Equality on a normalized unit square.',
+        mainsHook: '"The Kuznets curve hypothesis has failed in the post-liberalization Indian growth narrative." Critically examine the drivers of surging wealth concentration.'
+      },
+      {
+        title: 'Financial Inclusion Frameworks: JAM Trinity & SHG Ecosystem',
+        description: 'Institutional mechanics bridging the unbanked and informal segments.',
+        points: [
+          'PMJDY Ecosystem: Over 52 Crore Jan Dhan bank accounts opened (55%+ owned by women, 67% in rural/semi-urban branches); features zero-balance, RuPay debit card, and ₹10,000 overdraft facility.',
+          'JAM Trinity (Jan Dhan, Aadhaar, Mobile): Enabled targeted Direct Benefit Transfer (DBT) across 300+ central schemes (PM-KISAN, PAHAL, MGNREGA), plugging fiscal leakage and saving over ₹2.7 Lakh Crore in cumulative ghost exclusions.',
+          'SHG-Bank Linkage Programme (SBLP): Spearheaded by NABARD; links over 1.4 Crore Self-Help Groups (90%+ all-women) with formal commercial bank micro-credit, maintaining repayment rates exceeding 97%.',
+          'Regulatory Architecture: RBI’s National Strategy for Financial Inclusion (NSFI 2019-2024); Priority Sector Lending (PSL) mandates requiring scheduled commercial banks to allocate 40% of Adjusted Net Bank Credit (ANBC) to agriculture, MSMEs, education, housing, and social infrastructure.'
         ]
       },
       {
-        title: 'Government Budgeting Architecture & 2017 Reforms',
-        description: 'Receipts vs Expenditure structure and landmark changes in Indian fiscal procedures.',
+        title: 'Parliamentary Budgetary Procedures & Constitutional Stages',
+        description: 'Legislative scrutiny, constitutional mandates, and control over sovereign finances.',
         points: [
-          'Revenue Account: Deals with current transactions that DO NOT create assets or reduce liabilities. Revenue Receipts (Tax & Non-tax); Revenue Expenditure (Interest payments, defense salaries, subsidies, pensions).',
-          'Capital Account: Deals with transactions that CREATE assets or REDUCE liabilities. Capital Receipts (Borrowings, recovery of loans, disinvestment); Capital Expenditure (Building roads, ports, equity in PSUs, defense equipment procurement).',
-          'Budget 2017 Landmark Reforms: (1) Merger of 92-year-old separate Railway Budget into General Budget (Bibek Debroy Committee); (2) Advancement of Budget presentation date from last day of Feb to February 1st (ensuring funds flow by April 1); (3) Scrapping of artificial Plan vs Non-Plan expenditure classification, replaced by Revenue vs Capital classification.'
+          'Constitutional Funds: (1) Consolidated Fund of India (Article 266(1)): All revenues received, loans raised, and loan repayments; zero withdrawal permitted without parliamentary law; (2) Public Account of India (Article 266(2)): Provident funds, judicial deposits, savings bank deposits where government acts as banker/trustee; executive action suffices; (3) Contingency Fund of India (Article 267): Imprest of ₹30,000 Crore placed at the disposal of the President for unforeseen emergencies, recouped via Parliament.',
+          'Key Budgetary Bills: (1) Appropriation Bill (Article 114): Authorizes expenditure from the Consolidated Fund of India for both "Charged" expenditures (non-votable: President/Judges salaries, debt servicing) and "Made" expenditures (votable); (2) Finance Bill (Article 110): Authorizes taxation and revenue mobilization proposals; enacted as a Money Bill.',
+          'Parliamentary Scrutiny Mechanisms: (1) Departmentally Related Standing Committees (DRSCs): 24 committees scrutinize Demands for Grants of various ministries during a 3-week parliamentary recess; (2) Cut Motions: Policy Cut (disapproval of policy; demand reduced to Re 1), Economy Cut (demand reduced by specified amount), Token Cut (ventilates specific grievance; demand reduced by ₹100). If a Cut Motion is passed in Lok Sabha, the Council of Ministers must resign.',
+          'Guillotine Closure: On the last day allocated for discussion of Demands for Grants, the Speaker puts all remaining undiscussed demands of various ministries to vote en bloc without further debate, ensuring budgetary passage before April 1.'
         ],
-        prelimsHook: 'A loan given by the Central Government to a State Government is a Capital Expenditure, whereas the interest received on that loan is a Revenue Receipt.',
-        mainsHook: '"Scrapping the Plan vs Non-Plan distinction in 2017 brought true focus to the quality of expenditure." Elucidate with respect to Capital vs Revenue outlays.',
-        officialSource: 'Union Budget / Art. 112 Constitution of India'
+        prelimsHook: 'Expenditure "charged" upon the Consolidated Fund of India (like Supreme Court judges’ salaries and sovereign debt interest) can be discussed in Parliament but cannot be put to vote.',
+        mainsHook: '"The frequent resort to Guillotine closure undermines legislative scrutiny of executive spending." Analyze structural parliamentary reforms needed.'
+      },
+      {
+        title: 'Modern Budgeting Typologies: Performance, Outcome, ZBB & Gender Budgeting',
+        description: 'Methodologies to optimize allocative efficiency and equity in public outlays.',
+        points: [
+          'Performance Budgeting: Focuses on the relationship between inputs and outputs, assessing what the government accomplishes with the funds allocated rather than merely tracking expenditure compliance.',
+          'Outcome Budgeting (Introduced 2005): Goes beyond physical outputs to evaluate actual developmental outcomes and qualitative impacts (e.g., instead of measuring km of highway built, it measures reduction in logistics transit time and freight cost).',
+          'Zero-Based Budgeting (ZBB - Peter Pyhrr): Unlike traditional incremental budgeting (which takes last year’s outlay as baseline and adds an incremental percentage), ZBB requires every program or activity to justify its entire budget from scratch (zero base), identifying and terminating obsolete schemes.',
+          'Gender Budgeting (Introduced 2005-06): Statement 20 of Union Budget; disaggregates allocations into: Part A (Schemes with 100% allocation exclusively for women, e.g., Sukanya Samriddhi, Beti Bachao) and Part B (Schemes with at least 30% to 99% allocation targeted at women, e.g., PMAY-G, MGNREGA).'
+        ]
       },
       {
         title: 'Measures of Government Deficits & FRBM Act',

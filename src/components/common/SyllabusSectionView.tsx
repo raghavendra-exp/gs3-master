@@ -244,6 +244,21 @@ export const SyllabusSectionView: React.FC<SyllabusSectionViewProps> = ({
           </div>
         </div>
 
+        {/* Conceptual Architecture / Diagram (if available) */}
+        {currentSection.diagramPrompt && (
+          <div className="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
+            <h3 className="text-sm font-extrabold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+              <Layers size={16} className={style.textAccent} />
+              <span>Conceptual Architecture & Flowchart Blueprint</span>
+            </h3>
+            <div className="p-4 bg-slate-950 border border-slate-800 rounded-xl overflow-x-auto shadow-inner">
+              <pre className="font-mono text-xs text-amber-300 leading-relaxed whitespace-pre selection:bg-amber-500/20">
+                {currentSection.diagramPrompt}
+              </pre>
+            </div>
+          </div>
+        )}
+
         {/* Comparative Table (if available) */}
         {currentSection.comparativeTable && (
           <div className="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">

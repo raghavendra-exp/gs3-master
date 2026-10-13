@@ -9,9 +9,33 @@ export const environmentComprehensiveData: SyllabusSection[] = [
   {
     id: 'biodiversity-conservation',
     title: 'Biodiversity Conservation & Protected Areas',
-    subTitle: 'HIPPO Model, In-Situ vs Ex-Situ, Western Ghats Gadgil vs Kasturirangan, WPA 2022 & BDA 2023',
+    subTitle: 'HIPPO Model, In-Situ vs Ex-Situ, Western Ghats Gadgil vs Kasturirangan, WPA 2022, BDA 2023 & Ramsar Montreux Record',
     category: 'Biodiversity & Conservation',
     description: 'The preservation, sustainable management, and legal restoration of biological ecosystems, species richness, and indigenous genetic diversity.',
+    diagramPrompt: `+-----------------------------------------------------------------------------------+
+|               BIODIVERSITY CONSERVATION & PROTECTED AREAS MATRIX                  |
++-----------------------------------------------------------------------------------+
+| 1. PROTECTED AREAS HIERARCHY (WPA 1972 amended 2022):                             |
+|    - National Parks: Highest legal sanctity, zero grazing / human activity        |
+|    - Wildlife Sanctuaries: Regulated grazing / minor forest produce permitted     |
+|    - Conservation Reserves: Buffer zones / corridors (public land)                |
+|    - Community Reserves: Privately or community owned conservation landscapes    |
+|                                                                                   |
+| 2. BIOSPHERE RESERVES (UNESCO MAB Programme):                                     |
+|    [CORE ZONE: Strictly protected]                                                |
+|       --> [BUFFER ZONE: Non-destructive research, education, eco-tourism]         |
+|              --> [TRANSITION ZONE: Sustainable human settlements & agriculture]   |
+|                                                                                   |
+| 3. BIOLOGICAL DIVERSITY ACT 2002 (Amended 2023) - 3-TIER ARCHITECTURE:           |
+|    National Biodiversity Authority (NBA, Chennai) - Apex foreign approval & ABS   |
+|      --> State Biodiversity Boards (SBBs) - Commercial utilization regulation     |
+|            --> Biodiversity Management Committees (BMCs) - Peoples Register (PBR) |
+|                                                                                   |
+| 4. WETLAND CONSERVATION (Ramsar Convention 1971):                                 |
+|    - 85+ Ramsar Sites in India                                                    |
+|    - Montreux Record: Keoladeo National Park (Rajasthan) & Loktak Lake (Manipur)  |
+|      (Chilika Lake was successfully removed in 2002 post ecological recovery)     |
++-----------------------------------------------------------------------------------+`,
     coreConcepts: [
       {
         title: 'Levels of Biodiversity & Ecosystem Services',
@@ -37,11 +61,15 @@ export const environmentComprehensiveData: SyllabusSection[] = [
       },
       {
         title: 'Legislative Framework: WPA 1972 (2022 Amendment) & BDA 2002 (2023 Amendment)',
-        description: 'Modernizing wildlife protection and streamlining biological access and benefit sharing.',
+        description: 'Modernizing wildlife protection, People’s Biodiversity Registers (PBR), and Access and Benefit Sharing (ABS).',
         points: [
           'Wildlife Protection (Amendment) Act 2022: (1) Rationalized schedules from 6 down to 4: Schedule I (highest protection for endangered mammals, birds, reptiles); Schedule II (lesser protection); Schedule III (protected plant species); Schedule IV (specimens listed under CITES Appendices); (2) Created Standing Committee of State Board for Wildlife (SBWL); (3) Empowered Central Government to regulate or ban invasive alien species; (4) Regulates voluntary surrender of captive wild animals.',
-          'Biological Diversity (Amendment) Act 2023: Three-tier statutory structure: National Biodiversity Authority (NBA - Chennai), State Biodiversity Boards (SBB), and local Biodiversity Management Committees (BMC). 2023 Amendment: Decriminalized offenses into civil penalties; exempted registered AYUSH practitioners and codified traditional knowledge holders from prior intimation to SBBs for accessing biological resources; streamlined Access and Benefit Sharing (ABS) to attract foreign bio-investment while protecting local community rights.'
-        ]
+          'Biological Diversity (Amendment) Act 2023: Three-tier statutory structure: National Biodiversity Authority (NBA - Chennai), State Biodiversity Boards (SBB), and local Biodiversity Management Committees (BMC). 2023 Amendment: Decriminalized offenses into civil penalties; exempted registered AYUSH practitioners and codified traditional knowledge holders from prior intimation to SBBs for accessing biological resources; streamlined Access and Benefit Sharing (ABS) to attract foreign bio-investment while protecting local community rights.',
+          'People’s Biodiversity Register (PBR): Prepared by local BMCs to document comprehensive local bio-resources, landscape medicinal plants, traditional agronomic knowledge, and local landraces, preventing biopiracy.',
+          'Ramsar Convention (1971) & Montreux Record: Intergovernmental treaty for wetland conservation (85+ Ramsar sites in India). Montreux Record: Register of wetland sites on the List of Wetlands of International Importance where changes in ecological character have occurred, are occurring, or are likely to occur due to technological developments, pollution, or human interference. Indian Sites on Montreux Record: (1) Keoladeo National Park (Rajasthan - water shortage and grazing issues); (2) Loktak Lake (Manipur - deforestation in catchment and phumdis degradation). Note: Chilika Lake (Odisha) was placed in 1993 but successfully removed in 2002 following lake-mouth dredging and community restoration.'
+        ],
+        prelimsHook: 'Currently, only two Indian wetlands are on the Montreux Record: Keoladeo National Park (Rajasthan) and Loktak Lake (Manipur). Chilika Lake was removed from the Montreux Record in 2002.',
+        mainsHook: '"The Biological Diversity (Amendment) Act 2023 balances ease of doing bio-business with community rights, but dilutes biopiracy safeguards." Critically examine.'
       }
     ],
     comparativeTable: {
@@ -58,27 +86,58 @@ export const environmentComprehensiveData: SyllabusSection[] = [
   {
     id: 'environmental-pollution-degradation',
     title: 'Environmental Pollution & Global Phenomena',
-    subTitle: 'Air NAAQS/NCAP, Water BOD/COD, Plastic/E-Waste Rules, Ozone Chapman Cycle, IPCC AR6 & NGT',
+    subTitle: 'Air NAAQS/NCAP/GRAP, BS-VI Leapfrog, Water BOD/COD, Plastic EPR, Microplastics, Chapman Cycle & IPCC AR6',
     category: 'Pollution & Climate',
     description: 'Systemic degradation of atmospheric, aquatic, and terrestrial spheres, waste governance rules, radiative climate forcing, and environmental jurisprudence.',
+    diagramPrompt: `+-----------------------------------------------------------------------------------+
+|               AIRSHED, POLLUTION & WASTE GOVERNANCE ARCHITECTURE                  |
++-----------------------------------------------------------------------------------+
+| 1. AIR QUALITY GOVERNANCE (CAQM & NCAP):                                          |
+|    - NCAP: Target 40% reduction in PM2.5/PM10 by 2026 across 131 non-attainment   |
+|    - Graded Response Action Plan (GRAP) for Delhi-NCR Airshed:                    |
+|      * Stage I (Poor, AQI 201-300): Mechanized sweeping, dust control             |
+|      * Stage II (Very Poor, AQI 301-400): Diesel generator ban, enhanced parking  |
+|      * Stage III (Severe, AQI 401-450): Halt non-essential construction, BS-III/IV|
+|      * Stage IV (Severe+, AQI > 450): Ban non-BS-VI trucks, school closures       |
+|                                                                                   |
+| 2. VEHICULAR EMISSION LEAPFROG: BS-IV TO BS-VI:                                   |
+|    - Sulphur content slashed from 50 ppm to 10 ppm (80% drop)                     |
+|    - Selective Catalytic Reduction (SCR via AdBlue/urea) + DPF soot filters       |
+|                                                                                   |
+| 3. PLASTIC WASTE RULES & MICROPLASTICS:                                           |
+|    - Nationwide ban on 19 Single-Use Plastic (SUP) items                          |
+|    - Extended Producer Responsibility (EPR): Rigid, Flexible, Multi-layer, Sheets |
+|    - Microplastics (<5mm): Primary (microbeads) vs Secondary (weathered debris)   |
++-----------------------------------------------------------------------------------+`,
     coreConcepts: [
       {
-        title: 'Air & Water Pollution Dynamics and Governance',
-        description: 'Particulate matter, criteria pollutants, dissolved oxygen depletion, and river rejuvenation.',
+        title: 'Air Quality Governance: CAQM, NCAP, GRAP & BS-VI Transition',
+        description: 'Particulate matter, criteria pollutants, airshed management, and vehicular emission leaps.',
         points: [
-          'Air Pollution Metrics: National Ambient Air Quality Standards (NAAQS) monitors 12 criteria pollutants: PM10, PM2.5, SO2, NO2, CO, NH3, Ozone (O3), Lead (Pb), Arsenic, Nickel, Benzene, and Benzo(a)pyrene. National Clean Air Programme (NCAP): Targets a 40% reduction in PM2.5 and PM10 concentrations by 2026 across 131 non-attainment cities. Commission for Air Quality Management (CAQM) oversees Delhi-NCR air shed with statutory powers over stubble burning and industrial emissions.',
+          'Air Pollution Metrics: National Ambient Air Quality Standards (NAAQS) monitors 12 criteria pollutants: PM10, PM2.5, SO2, NO2, CO, NH3, Ozone (O3), Lead (Pb), Arsenic, Nickel, Benzene, and Benzo(a)pyrene. National Clean Air Programme (NCAP): Targets a 40% reduction in PM2.5 and PM10 concentrations by 2026 across 131 non-attainment cities.',
+          'Commission for Air Quality Management (CAQM): Statutory body overseeing Delhi-NCR and adjoining areas of Punjab, Haryana, Rajasthan, and UP, coordinating cross-jurisdictional airshed interventions.',
+          'Graded Response Action Plan (GRAP): Emergency counter-measure framework activated based on Delhi AQI: (1) Stage I - Poor (AQI 201–300): Mechanized road sweeping, anti-smog guns; (2) Stage II - Very Poor (AQI 301–400): Ban on diesel generator sets, hike parking fees; (3) Stage III - Severe (AQI 401–450): Ban non-essential construction, prohibit BS-III petrol and BS-IV diesel cars; (4) Stage IV - Severe+ (AQI > 450): Ban entry of non-BS-VI diesel trucks, shift schools to online classes, work-from-home orders.',
+          'BS-VI Leapfrog Norms: India skipped BS-V and moved directly from BS-IV to BS-VI in April 2020. Key engineering shifts: (1) Sulphur content slashed by 80% from 50 ppm to 10 ppm; (2) Diesel vehicles fitted with Diesel Particulate Filters (DPF) and Selective Catalytic Reduction (SCR) systems using Aqueous Urea Solution (AdBlue) to break down toxic NOx into harmless nitrogen and water.'
+        ],
+        prelimsHook: 'In the BS-VI emission transition, fuel sulphur content was reduced from 50 ppm (BS-IV) to 10 ppm (BS-VI), an 80% reduction in sulphur levels.',
+        mainsHook: '"Managing winter smog in Delhi requires treating the entire Indo-Gangetic Plain as a single continuous airshed." Elucidate the role of CAQM.'
+      },
+      {
+        title: 'Water Pollution Metrics & Eutrophication Lifecycle',
+        description: 'Dissolved oxygen depletion, biological and chemical oxygen demand, and dead zones.',
+        points: [
           'Water Pollution Metrics: Dissolved Oxygen (DO - clean water > 6-8 mg/L; below 4 mg/L aquatic life perishes); Biochemical Oxygen Demand (BOD - amount of dissolved oxygen consumed by aerobic bacteria to decompose organic matter; clean water < 2 mg/L, polluted water > 10-15 mg/L); Chemical Oxygen Demand (COD - measures total oxygen needed to oxidize all organic and inorganic pollutants; COD is always higher than BOD).',
           'Eutrophication Lifecycle: Nutrient enrichment (excess agricultural nitrates and phosphates) ➔ Accelerated algal bloom ➔ Sun-blocking carpet over water surface ➔ Algal die-off ➔ Aerobic bacterial decomposition consumes dissolved oxygen ➔ Hypoxia / Anoxia ➔ Widespread fish die-offs and dead zones.'
         ],
         prelimsHook: 'Chemical Oxygen Demand (COD) is always higher than Biochemical Oxygen Demand (BOD) because COD measures both biodegradable and non-biodegradable oxidizable organic compounds.',
-        mainsHook: '"Air pollution in the Indo-Gangetic Plains is not an isolated municipal issue but an integrated airshed crisis." Analyze the structural and meteorological factors involved.',
-        officialSource: 'CPCB / Commission for Air Quality Management (CAQM)'
+        officialSource: 'CPCB / CAQM Directions'
       },
       {
-        title: 'Waste Management Rules: Plastic, E-Waste & Hazardous Wastes',
-        description: 'Extended Producer Responsibility (EPR) and the circular economy transition.',
+        title: 'Waste Management Rules: Plastic EPR, SUP Ban & Microplastics Threat',
+        description: 'Single-use plastic bans, four EPR packaging categories, and microplastic bioaccumulation.',
         points: [
           'Plastic Waste Management Rules (2016, amended 2022): Imposed a nationwide ban on 19 identified single-use plastic (SUP) items with low utility and high littering potential (cutlery, straws, stirrers, thermocol, plastic sticks). Mandated minimum thickness of 120 microns for carry bags. Introduced Extended Producer Responsibility (EPR) guidelines classifying plastics into 4 categories: Category I (rigid plastic packaging); Category II (flexible plastic packaging of single layer); Category III (multilayered plastic packaging); Category IV (plastic sheets used for packaging).',
+          'Microplastics (<5mm): Particles smaller than 5 mm. Primary Microplastics: Manufactured directly at microscopic dimensions (microbeads in exfoliating cosmetics, facial scrubs, industrial blast media); Secondary Microplastics: Formed by environmental weathering, photodegradation, and wave mechanical breakdown of larger macroplastics (nylon ropes, synthetic clothing fibers, discarded fishing nets). Threat: Ingested by zooplankton, accumulate in marine trophic chains, and transfer synthetic endocrine disruptors into human food systems.',
           'E-Waste Management Rules 2022: Expanded scope to cover 106 electrical and electronic equipment (EEE), including solar photo-voltaic (PV) modules and panels. Enforces mandatory registration on CPCB online portal and year-on-year recycling targets under EPR for manufacturers, refurbishers, and recyclers.',
           'National Green Tribunal (NGT): Established under NGT Act 2010 (Article 21 Right to a Clean Environment). Specialized judicial body mandated to dispose of environmental disputes within 6 months. Guided by principles of Natural Justice, Sustainable Development, Precautionary Principle, and Polluter Pays Principle.'
         ]
@@ -101,6 +160,25 @@ export const environmentComprehensiveData: SyllabusSection[] = [
     subTitle: 'Statutory Basis under EPA 1986, 6-Stage Process, Category A vs B, Draft EIA 2020 Controversy',
     category: 'EIA Process',
     description: 'The statutory decision-making tool identifying, predicting, and mitigating the environmental and socio-ecological consequences of developmental projects prior to clearance.',
+    diagramPrompt: `+-----------------------------------------------------------------------------------+
+|               ENVIRONMENTAL IMPACT ASSESSMENT (EIA 2006) 6 STAGES                 |
++-----------------------------------------------------------------------------------+
+| Stage 1: SCREENING   -> Category A (Central/MoEFCC) vs Category B1/B2 (SEIAA)    |
+|                          (Category B2 exempt from full EIA & Public Hearing)      |
+|                                   |                                               |
+| Stage 2: SCOPING     -> EAC/SEAC frames Terms of Reference (ToR)                  |
+|                                   |                                               |
+| Stage 3: DRAFT EIA   -> Baseline Environmental Monitoring (3 non-monsoon seasons) |
+|                                   |                                               |
+| Stage 4: PUBLIC      -> 30-day notice, video-recorded public hearing by SPCB & DM |
+|          CONSULTATION                                                             |
+|                                   |                                               |
+| Stage 5: APPRAISAL   -> Expert Appraisal Committee (EAC) technical scrutiny       |
+|                                   |                                               |
+| Stage 6: CLEARANCE   -> Environmental Clearance (EC) grant/rejection + Compliance |
+|                                                                                   |
+| CRITICAL CONTROVERSY: Draft EIA 2020 post-facto regularization (SC Alembic Pharm)|
++-----------------------------------------------------------------------------------+`,
     coreConcepts: [
       {
         title: 'Evolution & Legal Framework of EIA in India',
@@ -141,9 +219,30 @@ export const environmentComprehensiveData: SyllabusSection[] = [
   {
     id: 'disaster-management-framework',
     title: 'Disaster and Disaster Management',
-    subTitle: 'Natural vs Anthropogenic, 4-Stage Cycle, NDMA 3-Tier Architecture, Sendai Framework & CDRI',
+    subTitle: '4-Stage Cycle, NDMA 3-Tier Architecture, 15th FC NDRMF Funding, GLOFs, Urban Floods & Sendai Framework',
     category: 'Disaster Management',
     description: 'Proactive paradigm shift from post-disaster relief to holistic disaster risk reduction, community preparedness, early warning systems, and resilient infrastructure.',
+    diagramPrompt: `+-----------------------------------------------------------------------------------+
+|               DISASTER RISK GOVERNANCE & FINANCING ARCHITECTURE                   |
++-----------------------------------------------------------------------------------+
+| 1. INSTITUTIONAL 3-TIER ARCHITECTURE (DM Act 2005):                               |
+|    - National: NDMA (Chaired by Prime Minister) + NDRF (16 Battalions) + NIDM     |
+|    - State: SDMA (Chaired by Chief Minister)                                      |
+|    - District: DDMA (Collector + Zila Parishad President - Executive fulcrum)     |
+|                                                                                   |
+| 2. FINANCING ARCHITECTURE (15th Finance Commission):                              |
+|    National Disaster Risk Management Fund (NDRMF):                                |
+|    - 80% Response Fund (NDRF / SDRF)                                              |
+|    - 20% Mitigation Fund (NDMF / SDMF)                                            |
+|    - Cost sharing: 75:25 (General States) | 90:10 (NE & Himalayan States)         |
+|                                                                                   |
+| 3. HIGH-VULNERABILITY DISASTER TYPOLOGIES:                                        |
+|    - GLOFs: Glacial Lake Outbursts (South Lhonak, Sikkim 2023) - Sensor EWS       |
+|    - Urban Flooding: Concretization, wetland encroachment - Sponge City remedies  |
+|    - Heatwaves: IMD threshold (40 deg C Plains / 4.5 deg C anomaly) - Cool Roofs  |
+|                                                                                   |
+| 4. GLOBAL COMPASS: Sendai Framework (4 Priorities, 7 Targets) + CDRI (New Delhi)  |
++-----------------------------------------------------------------------------------+`,
     coreConcepts: [
       {
         title: 'Paradigm Shift: The 4-Stage Disaster Cycle & DM Act 2005',
@@ -157,6 +256,27 @@ export const environmentComprehensiveData: SyllabusSection[] = [
         prelimsHook: 'Under the Disaster Management Act 2005, the District Disaster Management Authority (DDMA) is the primary executive agency at the field level.',
         mainsHook: '"Community-based disaster management (CBDM) bridges the golden hour gap before institutional response forces arrive." Explain with case studies like Aapda Mitra.',
         officialSource: 'Disaster Management Act 2005 / NDMA Guidelines'
+      },
+      {
+        title: 'Disaster Risk Financing: 15th Finance Commission NDRMF/SDRF Framework',
+        description: 'Restructuring disaster funding into segregated Response and Mitigation baskets.',
+        points: [
+          '15th Finance Commission Restructuring: Created the comprehensive National Disaster Risk Management Fund (NDRMF) and State Disaster Risk Management Fund (SDRMF) allocating ~₹1.6 Lakh Crore over 2021-26.',
+          'Segregated Allocation Baskets: Total fund divided into: (1) Disaster Response Fund (80% allocation) - sub-divided into Response and Relief (70%) and Recovery and Reconstruction (30%); (2) Disaster Mitigation Fund (20% allocation) - dedicated explicitly to preventive mitigation projects (NDMF at Centre, SDMF at States).',
+          'Cost Sharing Pattern: SDRMF is shared between Centre and States in the ratio of: (1) 75:25 for General Category States; (2) 90:10 for North-Eastern and Himalayan States.',
+          'National Disaster Response Fund (NDRF): Supplemented by the Centre from the National Calamity Contingent Duty (NCCD) levied on select excisable goods and customs duties.'
+        ]
+      },
+      {
+        title: 'High-Vulnerability Typologies: GLOFs, Urban Flooding & Heatwaves',
+        description: 'Emerging climate-induced disaster manifestations and specialized mitigation guidelines.',
+        points: [
+          'Glacial Lake Outburst Floods (GLOFs): Occur when moraine- or ice-dams holding glacial meltwater breach catastrophically due to avalanche impact, earthquake, or thermal permafrost degradation. Exemplified by the South Lhonak lake breach in Sikkim (October 2023) destroying the Chungthang/Teesta-III dam, and the Chamoli rock-ice avalanche in Uttarakhand (2021). Mitigation: Automated water-level sensor telemetry, satellite InSAR monitoring, artificial controlled siphoning of glacial lakes, and prohibiting mega-hydro power dams immediately downstream of proglacial lakes.',
+          'Urban Flooding: Distinct from riverine flooding due to rapid hydrological runoff (peaking in minutes rather than days). Root Causes: Unplanned concretization (impervious surface > 80%), destruction of natural retention ponds and wetlands (encroachments on Bellandur Lake in Bengaluru, Pallikaranai marsh in Chennai, and Yamuna floodplains in Delhi), and under-designed storm-water drainage. Mitigation: Sponge City concept (permeable pavements, urban bioswales, rain gardens, recharge wells) and restoring urban blue-green corridors.',
+          'Heatwaves: Declared by IMD based on thresholds: Plains: Maximum temperature reaching at least 40°C, with departure from normal between 4.5°C to 6.4°C (Severe heatwave if departure > 6.4°C or temp >= 45°C); Coastal regions: Max temp >= 37°C; Hills: Max temp >= 30°C. Urban Heat Island (UHI) effect exacerbates mortality. Mitigation: Ahmedabad Heat Action Plan (HAP) model: color-coded early warnings, cool roofs (white reflective paint), public water kiosks, and adjusted outdoor labor hours.'
+        ],
+        prelimsHook: 'IMD declares a heatwave over the plains when the maximum temperature reaches at least 40°C and departs from normal by 4.5°C to 6.4°C, or when the absolute maximum temperature reaches 45°C.',
+        mainsHook: '"Urban flooding in Indian metropolitan cities is an engineered catastrophe rather than a natural disaster." Discuss with root causes and Sponge City solutions.'
       },
       {
         title: 'Global Frameworks: Sendai Framework & Coalition for Disaster Resilient Infrastructure (CDRI)',

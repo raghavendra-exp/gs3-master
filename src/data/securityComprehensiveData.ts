@@ -12,6 +12,21 @@ export const securityComprehensiveData: SyllabusSection[] = [
     subTitle: 'Naxalism Genesis, Tribal Alienation, Mining Displacement, SAMADHAN Doctrine & Security Responses',
     category: 'Extremism & Development',
     description: 'The socio-economic root causes fueling Left-Wing Extremism (LWE), structural governance vacuums, and the state’s calibrated twin security-development doctrine.',
+    diagramPrompt: `+-----------------------------------------------------------------------------------+
+|               TWIN SECURITY-DEVELOPMENT MATRIX AGAINST LWE                        |
++-----------------------------------------------------------------------------------+
+| SOCIO-ECONOMIC GRIEVANCES           OPERATIONAL SECURITY INTERVENTIONS            |
+| - Land Alienation (5th Schedule) -> - SAMADHAN Doctrine (MHA)                     |
+| - Mining displacement / no R&R   -> - CRPF, CoBRA, Greyhounds, C-60 Commandos     |
+| - Denial of Forest Rights (FRA)  -> - Forward Operating Bases (FOBs) deep inside  |
+| - Governance vacuum in Bastar    -> - Choking Extortion (NIA & ED attachments)    |
+|                                                                                   |
+| DEVELOPMENTAL RESTORATION:                                                        |
+| +-------------------------------------------------------------------------------+ |
+| | Road Requirement Plan (13,000 km) | 4G Forest Towers | Eklavya Schools (EMRS) | |
+| | PESA Act 1996 Gram Sabha Rights   | Aspirational Districts Monitoring (NITI)  | |
+| +-------------------------------------------------------------------------------+ |
++-----------------------------------------------------------------------------------+`,
     coreConcepts: [
       {
         title: 'Genesis & Root Causes of Left-Wing Extremism (Naxalism)',
@@ -55,6 +70,25 @@ export const securityComprehensiveData: SyllabusSection[] = [
     subTitle: 'Proxy Warfare, Hybrid Terror, NE Insurgency Accords, NIA, MAC, NATGRID & UAPA Reforms',
     category: 'Terrorism & Counter-Terror',
     description: 'Sovereignty challenges from state-sponsored cross-border proxies, insurgent dynamics, and the institutional intelligence architecture shielding the Indian state.',
+    diagramPrompt: `+-----------------------------------------------------------------------------------+
+|               POST-26/11 COUNTER-TERROR & INTELLIGENCE ARCHITECTURE               |
++-----------------------------------------------------------------------------------+
+| 1. STRATEGIC DECISION-MAKING:                                                     |
+|    National Security Council (NSC) -> Chaired by PM                               |
+|      --> National Security Adviser (NSA) -> Strategic Policy Group                |
+|                                                                                   |
+| 2. REAL-TIME INTELLIGENCE FUSION (24x7):                                          |
+|    Multi-Agency Centre (MAC under IB) <---> State Multi-Agency Centres (SMACs)    |
+|    Integrates: R&AW, IB, Military Intelligence, DRI, NCB, State Police            |
+|                                                                                   |
+| 3. PAN-INDIA INVESTIGATION & INTERROGATION:                                       |
+|    National Investigation Agency (NIA Act 2008 / 2019 Amendment):                 |
+|    - Concurrent pan-India jurisdiction (No state consent needed)                  |
+|    - Extraterritorial mandate over offenses against Indians abroad                |
+|                                                                                   |
+| 4. DATA INTEGRATION GRID:                                                         |
+|    NATGRID: Links 21 core databases (Banking, Immigration, Telecom, Flights)      |
++-----------------------------------------------------------------------------------+`,
     coreConcepts: [
       {
         title: 'External State & Non-State Actors: Proxy Warfare Dynamics',
@@ -87,6 +121,24 @@ export const securityComprehensiveData: SyllabusSection[] = [
     subTitle: 'Radicalization, Deepfakes, IT Rules 2021/2023, Malware Vectors, NCIIPC, CERT-In & I4C',
     category: 'Cyber Security & Social Media',
     description: 'Protecting the nation’s cognitive and digital space against algorithmic radicalization, critical infrastructure cyber warfare, ransomware attacks, and online disinformation.',
+    diagramPrompt: `+-----------------------------------------------------------------------------------+
+|               NATIONAL CYBER SECURITY DEFENCE ARCHITECTURE                        |
++-----------------------------------------------------------------------------------+
+| 1. APEX POLICY COORDINATION:                                                      |
+|    National Cyber Security Coordinator (NCSC) under National Security Council    |
+|                                                                                   |
+| 2. CRITICAL INFORMATION INFRASTRUCTURE (CII - Sec. 70 IT Act):                   |
+|    NCIIPC (National Critical Information Infrastructure Protection Centre)        |
+|    Guards: Power grids, Nuclear, Telecom, Banking, Air Traffic Control            |
+|                                                                                   |
+| 3. INCIDENT RESPONSE & EMERGENCY ADVISORY:                                        |
+|    CERT-In (Indian Computer Emergency Response Team - Sec. 70B IT Act):           |
+|    - Mandatory 6-hour incident reporting window (2022 Directions)                 |
+|    - Cyber Swachhta Kendra (Botnet Cleaning and Malware Analysis Centre)          |
+|                                                                                   |
+| 4. CITIZEN FRAUD & LAW ENFORCEMENT:                                               |
+|    I4C (Indian Cyber Crime Coordination Centre) + Helpline 1930 (Real-time freeze)|
++-----------------------------------------------------------------------------------+`,
     coreConcepts: [
       {
         title: 'Communication Networks & Social Media Security Threats',
@@ -119,6 +171,26 @@ export const securityComprehensiveData: SyllabusSection[] = [
     subTitle: 'Placement-Layering-Integration, Hawala, TBML, PMLA 2002, FIU-IND & FATF 2024 Evaluation',
     category: 'Money Laundering & PMLA',
     description: 'The anatomy of illicit financial flows, terror financing conduits, Enforcement Directorate powers, and global anti-money laundering compliance.',
+    diagramPrompt: `+-----------------------------------------------------------------------------------+
+|               3-STAGE MONEY LAUNDERING CYCLE & PMLA ENFORCEMENT                   |
++-----------------------------------------------------------------------------------+
+| STAGE 1: PLACEMENT                                                                |
+| - Illicit cash injected into financial system via Smurfing / Structuring          |
+| - Cash-intensive businesses (casinos, shell retail)                               |
+|                                |                                                  |
+| STAGE 2: LAYERING               v                                                  |
+| - Complex web of international wire transfers through offshore tax havens        |
+| - Trade-Based Money Laundering (TBML: over/under-invoicing) & Crypto mixers       |
+|                                |                                                  |
+| STAGE 3: INTEGRATION           v                                                  |
+| - Reintroduction as legitimate white capital into real estate, luxury assets, M&A |
+|                                                                                   |
+| ENFORCEMENT ARCHITECTURE:                                                          |
+| - Directorate of Enforcement (ED): Provisional attachment (Sec. 5), Summons       |
+| - Section 45 PMLA: Twin conditions for bail + Reverse burden of proof (Sec. 24)  |
+| - FIU-IND: Cash & Suspicious Transaction Reports (STRs) + VDA monitoring          |
+| - FATF: Global watchdog (India in 'Regular Follow-Up' tier in 2024 Evaluation)    |
++-----------------------------------------------------------------------------------+`,
     coreConcepts: [
       {
         title: 'The 3-Stage Process of Money Laundering',
@@ -151,6 +223,25 @@ export const securityComprehensiveData: SyllabusSection[] = [
     subTitle: '6 Terrestrial Borders, 3-Tier Coastal Security, CIBMS, FMR Suspension, Golden Crescent & Triangle',
     category: 'Border Security & Crime Nexus',
     description: 'Securing India’s 15,106 km land frontiers, 7,516 km coastline, smart fencing, and severing the symbiotic nexus between transnational crime syndicates and terror proxies.',
+    diagramPrompt: `+-----------------------------------------------------------------------------------+
+|               BORDER SECURITY MATRIX & TRANSNATIONAL NARCO-NEXUS                  |
++-----------------------------------------------------------------------------------+
+| 1. TERRESTRIAL BORDER SPECIFICATIONS:                                             |
+|    - Pakistan (3,323 km): Guarded by BSF -> CIBMS Smart Fencing & Anti-Drone guns |
+|    - China (3,488 km): Guarded by ITBP -> LAC, Vibrant Villages, Sela Tunnel      |
+|    - Myanmar (1,643 km): Guarded by Assam Rifles -> FMR suspended; 100% fenced    |
+|    - Bangladesh (4,096 km): Guarded by BSF -> BOLD-QIT riverine tech, LBA 2015     |
+|    - Nepal (1,751 km) & Bhutan (699 km): Guarded by SSB (Open borders)            |
+|                                                                                   |
+| 2. COASTAL 3-TIER ARCHITECTURE:                                                   |
+|    - Outer (>12-200 NM EEZ): Indian Navy                                          |
+|    - Intermediate (Up to 12 NM): Indian Coast Guard (ICG)                         |
+|    - Shallow Inshore / Creeks: State Marine Police                                |
+|                                                                                   |
+| 3. NARCO-TERROR CONDUITS:                                                         |
+|    [GOLDEN CRESCENT: Iran-Afghan-Pak] ===> Heroin/Drones into Punjab/Gujarat      |
+|    [GOLDEN TRIANGLE: Myanmar-Laos-Thai] ===> Meth/Yaba into North-East frontiers  |
++-----------------------------------------------------------------------------------+`,
     coreConcepts: [
       {
         title: 'Terrestrial & Coastal Border Management Strategy',
@@ -184,6 +275,29 @@ export const securityComprehensiveData: SyllabusSection[] = [
     subTitle: 'CAPFs (BSF, CRPF, CISF, ITBP, SSB), Paramilitary (Assam Rifles, NSG, SFF), IB, R&AW, NIA, CBI, ED & NTRO',
     category: 'Security Forces Directory',
     description: 'Comprehensive directory detailing the statutory mandates, administrative controls, theaters of deployment, and command structures of all Indian security and intelligence agencies.',
+    diagramPrompt: `+-----------------------------------------------------------------------------------+
+|               SECURITY FORCES & INTELLIGENCE AGENCIES DIRECTORY                   |
++-----------------------------------------------------------------------------------+
+| CENTRAL ARMED POLICE FORCES (CAPFs) - MINISTRY OF HOME AFFAIRS:                   |
+|  - BSF (1965): Guarding Indo-Pak & Indo-Bangladesh borders                        |
+|  - CRPF (1939): Internal security, LWE counter-insurgency, RAF & CoBRA wings      |
+|  - CISF (1969): Airports, Delhi Metro, Nuclear, Space, Critical Infrastructure   |
+|  - ITBP (1962): Indo-China Himalayan border (LAC high-altitude patrols)          |
+|  - SSB (1963): Open borders of Indo-Nepal and Indo-Bhutan                         |
+|                                                                                   |
+| PARAMILITARY & SPECIAL FORCES:                                                    |
+|  - Assam Rifles (1835): Dual control (MHA Admin / MoD Ops) - Myanmar border & NE  |
+|  - NSG (1984): Federal contingency counter-terror strike force (SAG & SRG)        |
+|  - SFF (1962): Establishment 22 - Mountain warfare (Cabinet Secretariat)         |
+|                                                                                   |
+| INTELLIGENCE & INVESTIGATIVE AGENCIES:                                            |
+|  - IB (1887): Domestic internal intelligence & counter-espionage (MHA)            |
+|  - R&AW (1968): External intelligence, foreign strategic security (Cabinet Sec)   |
+|  - NIA (2008): Pan-India counter-terrorism & terror-funding probes (MHA)          |
+|  - ED (1956): Financial intelligence, PMLA 2002 & FEMA 1999 (Ministry of Finance)|
+|  - CBI (1963 / DSPE Act): Corruption & high-profile economic offenses            |
+|  - NTRO (2004): Technical satellite & cyber imagery intelligence (Cabinet Sec)   |
++-----------------------------------------------------------------------------------+`,
     coreConcepts: [
       {
         title: 'Central Armed Police Forces (CAPFs) under Ministry of Home Affairs',

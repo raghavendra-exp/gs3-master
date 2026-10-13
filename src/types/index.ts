@@ -333,9 +333,9 @@ export interface CurrentAffairItem {
 // ------------------------------------
 export interface PYQItem {
   id: string;
-  exam: 'UPSC_PRELIMS' | 'UPSC_MAINS' | 'UPPSC_PRELIMS' | 'UPPSC_MAINS';
+  exam: 'UPSC_PRELIMS' | 'UPSC_MAINS' | 'UPPSC_PRELIMS' | 'UPPSC_MAINS' | 'UP_RO_ARO';
   year: number;
-  paper: 'GS-III' | 'GS-I (Prelims)';
+  paper: 'GS-III' | 'GS-I (Prelims)' | 'RO/ARO GS';
   questionNumber?: number;
   marks?: number;
   questionText: string;
